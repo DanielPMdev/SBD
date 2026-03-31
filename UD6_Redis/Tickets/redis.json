@@ -1,0 +1,178 @@
+[
+    {
+        "id": "flow1",
+        "type": "tab",
+        "label": "Redis Test",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "inject-set",
+        "type": "inject",
+        "z": "flow1",
+        "name": "Inyectar SET (topic=key, payload=value)",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "nameRed",
+        "payload": "daniel",
+        "payloadType": "str",
+        "x": 220,
+        "y": 120,
+        "wires": [
+            [
+                "prep-set"
+            ]
+        ]
+    },
+    {
+        "id": "prep-set",
+        "type": "function",
+        "z": "flow1",
+        "name": "Compatibilidad SET (msg.topic/msg.key)",
+        "func": "var key = msg.topic || msg.key;\nvar value = msg.payload;\nmsg.key = key;\nmsg.topic = key;\nmsg.payload = value;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 120,
+        "wires": [
+            [
+                "set-node"
+            ]
+        ]
+    },
+    {
+        "id": "set-node",
+        "type": "redis-command",
+        "z": "flow1",
+        "server": "2ec6c930119ed7c3",
+        "command": "set",
+        "name": "SET key",
+        "topic": "",
+        "params": "",
+        "paramsType": "json",
+        "block": false,
+        "x": 880,
+        "y": 120,
+        "wires": [
+            [
+                "debug-after-set"
+            ]
+        ]
+    },
+    {
+        "id": "debug-after-set",
+        "type": "debug",
+        "z": "flow1",
+        "name": "DEBUG resultado SET (complete msg)",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "complete": "true",
+        "x": 1210,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "inject-get",
+        "type": "inject",
+        "z": "flow1",
+        "name": "Inyectar GET (topic=key)",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "nameRed",
+        "x": 180,
+        "y": 200,
+        "wires": [
+            [
+                "prep-get"
+            ]
+        ]
+    },
+    {
+        "id": "prep-get",
+        "type": "function",
+        "z": "flow1",
+        "name": "Compatibilidad GET (msg.topic/msg.key)",
+        "func": "var key = msg.topic || msg.key;\nmsg.key = key;\nmsg.topic = key;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 200,
+        "wires": [
+            [
+                "get-node"
+            ]
+        ]
+    },
+    {
+        "id": "get-node",
+        "type": "redis-command",
+        "z": "flow1",
+        "server": "2ec6c930119ed7c3",
+        "command": "get",
+        "name": "GET key",
+        "topic": "",
+        "params": "",
+        "paramsType": "json",
+        "block": false,
+        "x": 880,
+        "y": 200,
+        "wires": [
+            [
+                "debug-after-get"
+            ]
+        ]
+    },
+    {
+        "id": "debug-after-get",
+        "type": "debug",
+        "z": "flow1",
+        "name": "DEBUG resultado GET (complete msg)",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "complete": "true",
+        "x": 1200,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "2ec6c930119ed7c3",
+        "type": "redis-config",
+        "name": "Local",
+        "options": "{\"name\":\"Redis Stack\",\"host\":\"redis-stack\",\"port\":\"6379\",\"password\":\"\",\"db\":\"0\",\"tls\":false,\"options\":\"\",\"cluster\":false,\"sentinels\":\"\",\"mode\":\"standard\"}",
+        "cluster": false,
+        "optionsType": "json"
+    },
+    {
+        "id": "afb9700497d0d15c",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-redis": "1.4.0"
+        }
+    }
+]

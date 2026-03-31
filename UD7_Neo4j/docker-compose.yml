@@ -1,0 +1,30 @@
+services:
+  node-red-neo:
+    image: nodered/node-red:latest
+    ports:
+      - "1880:1880"
+    networks:
+      - node-red-neo
+    volumes:
+      - node-red-neo-data:/data
+
+  neo4j:
+    image: neo4j:latest
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/password
+      - NEO4J_dbms_security_procedures_unrestricted=apoc.*
+      - NEO4J_dbms_security_procedures_allowlist=apoc.*
+    networks:
+      - node-red-neo
+    volumes:
+      - neo4j-data:/data
+
+networks:
+  node-red-neo:
+
+volumes:
+  node-red-neo-data:
+  neo4j-data:

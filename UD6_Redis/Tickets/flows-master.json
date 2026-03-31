@@ -1,0 +1,650 @@
+[
+    {
+        "id": "e9a9c99b8f4ae041",
+        "type": "tab",
+        "label": "Server",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bf88d536dfca69dc",
+        "type": "group",
+        "z": "e9a9c99b8f4ae041",
+        "name": "Buy Ticket",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "2642befe6f3cdf71",
+            "7591e80cb66d71f9",
+            "53453f56332e811d",
+            "9dc54f7fc05b102d",
+            "550e60a718f7ab81",
+            "8afacdd3220582f6"
+        ],
+        "x": 94,
+        "y": 419,
+        "w": 1172,
+        "h": 82
+    },
+    {
+        "id": "bff4019179dc7ff1",
+        "type": "group",
+        "z": "e9a9c99b8f4ae041",
+        "name": "Create Index",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "5402879ec1d9384c",
+            "9741c4430bb3724f",
+            "c8272bb787e03767",
+            "a426aef74c916760"
+        ],
+        "x": 314,
+        "y": 659,
+        "w": 812,
+        "h": 82
+    },
+    {
+        "id": "f04c5ec02d728f4f",
+        "type": "group",
+        "z": "e9a9c99b8f4ae041",
+        "name": "Login",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "2bbfd60def1f2fa9",
+            "17488ff718a27f36",
+            "c8d8b97ff3d0eddf",
+            "caa7a41ebc6422e8",
+            "96ed3474f64b9891",
+            "1210896958164d24",
+            "329f6e30fc821052",
+            "9d39429a785733f2"
+        ],
+        "x": 74,
+        "y": 59,
+        "w": 1312,
+        "h": 182
+    },
+    {
+        "id": "f0de13d4874edb38",
+        "type": "group",
+        "z": "e9a9c99b8f4ae041",
+        "name": "Logout",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ca5666cb378a7531",
+            "32ae2fb662323bfd",
+            "9fdba98f2106e1d8",
+            "fe5b854ddb3cd354"
+        ],
+        "x": 254,
+        "y": 279,
+        "w": 812,
+        "h": 102
+    },
+    {
+        "id": "ca49011520a2cdaa",
+        "type": "group",
+        "z": "e9a9c99b8f4ae041",
+        "name": "Search",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "3d71bad6a62777f8",
+            "3fca14b6d86b89ce",
+            "345501ba606f3124",
+            "e6812143b0a26210",
+            "7fd862ea9f49777d"
+        ],
+        "x": 154,
+        "y": 539,
+        "w": 1092,
+        "h": 82
+    },
+    {
+        "id": "17488ff718a27f36",
+        "type": "http in",
+        "z": "e9a9c99b8f4ae041",
+        "g": "f04c5ec02d728f4f",
+        "name": "",
+        "url": "/user/login",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 140,
+        "wires": [
+            [
+                "c8d8b97ff3d0eddf"
+            ]
+        ]
+    },
+    {
+        "id": "ca5666cb378a7531",
+        "type": "http in",
+        "z": "e9a9c99b8f4ae041",
+        "g": "f0de13d4874edb38",
+        "name": "",
+        "url": "/user/logout",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 370,
+        "y": 320,
+        "wires": [
+            [
+                "32ae2fb662323bfd"
+            ]
+        ]
+    },
+    {
+        "id": "c8d8b97ff3d0eddf",
+        "type": "function",
+        "z": "e9a9c99b8f4ae041",
+        "g": "f04c5ec02d728f4f",
+        "name": "function 8",
+        "func": "msg.request = msg.payload;\nmsg.payload = [\n    \"active_users\", msg.request.user\n]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 140,
+        "wires": [
+            [
+                "2bbfd60def1f2fa9"
+            ]
+        ]
+    },
+    {
+        "id": "caa7a41ebc6422e8",
+        "type": "switch",
+        "z": "e9a9c99b8f4ae041",
+        "g": "f04c5ec02d728f4f",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 140,
+        "wires": [
+            [
+                "96ed3474f64b9891"
+            ],
+            [
+                "1210896958164d24"
+            ]
+        ]
+    },
+    {
+        "id": "1210896958164d24",
+        "type": "http response",
+        "z": "e9a9c99b8f4ae041",
+        "g": "f04c5ec02d728f4f",
+        "name": "",
+        "statusCode": "500",
+        "headers": {},
+        "x": 940,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "96ed3474f64b9891",
+        "type": "function",
+        "z": "e9a9c99b8f4ae041",
+        "g": "f04c5ec02d728f4f",
+        "name": "function 9",
+        "func": "msg.payload = [`user:${msg.request.user}`, \"user\", msg.request.user]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 100,
+        "wires": [
+            [
+                "329f6e30fc821052"
+            ]
+        ]
+    },
+    {
+        "id": "9d39429a785733f2",
+        "type": "http response",
+        "z": "e9a9c99b8f4ae041",
+        "g": "f04c5ec02d728f4f",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1300,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "32ae2fb662323bfd",
+        "type": "function",
+        "z": "e9a9c99b8f4ae041",
+        "g": "f0de13d4874edb38",
+        "name": "function 10",
+        "func": "msg.request = msg.payload;\nmsg.payload = [\n    \"active_users\", msg.request.user\n]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 320,
+        "wires": [
+            [
+                "9fdba98f2106e1d8"
+            ]
+        ]
+    },
+    {
+        "id": "fe5b854ddb3cd354",
+        "type": "http response",
+        "z": "e9a9c99b8f4ae041",
+        "g": "f0de13d4874edb38",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 980,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a426aef74c916760",
+        "type": "inject",
+        "z": "e9a9c99b8f4ae041",
+        "g": "bff4019179dc7ff1",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 410,
+        "y": 700,
+        "wires": [
+            [
+                "c8272bb787e03767"
+            ]
+        ]
+    },
+    {
+        "id": "c8272bb787e03767",
+        "type": "function",
+        "z": "e9a9c99b8f4ae041",
+        "g": "bff4019179dc7ff1",
+        "name": "function 11",
+        "func": "msg.payload = [\n    \"ticketsIdx\",\n    \"ON\",\n    \"JSON\",\n    \"PREFIX\",\n    \"1\",\n    \"tk:\",\n    \"SCHEMA\",\n    \"$.user\",\n    \"AS\",\n    \"user\",\n    \"TAG\",\n    \"$.id\",\n    \"AS\",\n    \"id\",\n    \"TAG\"\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 700,
+        "wires": [
+            [
+                "9741c4430bb3724f"
+            ]
+        ]
+    },
+    {
+        "id": "5402879ec1d9384c",
+        "type": "debug",
+        "z": "e9a9c99b8f4ae041",
+        "g": "bff4019179dc7ff1",
+        "name": "debug 46",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "53453f56332e811d",
+        "type": "function",
+        "z": "e9a9c99b8f4ae041",
+        "g": "bf88d536dfca69dc",
+        "name": "function 12",
+        "func": "msg.request = msg.payload;\nmsg.payload = [\"references\"]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 460,
+        "wires": [
+            [
+                "9dc54f7fc05b102d"
+            ]
+        ]
+    },
+    {
+        "id": "550e60a718f7ab81",
+        "type": "function",
+        "z": "e9a9c99b8f4ae041",
+        "g": "bf88d536dfca69dc",
+        "name": "function 13",
+        "func": "const reference = msg.payload;\nmsg.payload = [`tk:${reference}`, \"$\", JSON.stringify(msg.request)]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 460,
+        "wires": [
+            [
+                "8afacdd3220582f6"
+            ]
+        ]
+    },
+    {
+        "id": "7591e80cb66d71f9",
+        "type": "http response",
+        "z": "e9a9c99b8f4ae041",
+        "g": "bf88d536dfca69dc",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1180,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e6812143b0a26210",
+        "type": "function",
+        "z": "e9a9c99b8f4ae041",
+        "g": "ca49011520a2cdaa",
+        "name": "function 14",
+        "func": "msg.payload = [\"ticketsIdx\", `@user:{${msg.payload.user}}`]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 580,
+        "wires": [
+            [
+                "345501ba606f3124"
+            ]
+        ]
+    },
+    {
+        "id": "3d71bad6a62777f8",
+        "type": "http response",
+        "z": "e9a9c99b8f4ae041",
+        "g": "ca49011520a2cdaa",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1160,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "3fca14b6d86b89ce",
+        "type": "function",
+        "z": "e9a9c99b8f4ae041",
+        "g": "ca49011520a2cdaa",
+        "name": "function 15",
+        "func": "let result = []\nfor (let index = 1; index < msg.payload.length; index+=2) {\n    const row = msg.payload[index+1];\n    result.push(JSON.parse(row[1]))\n}\nmsg.payload = result;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 580,
+        "wires": [
+            [
+                "3d71bad6a62777f8"
+            ]
+        ]
+    },
+    {
+        "id": "2bbfd60def1f2fa9",
+        "type": "redis-command",
+        "z": "e9a9c99b8f4ae041",
+        "g": "f04c5ec02d728f4f",
+        "server": "76c58f0d464bae79",
+        "command": "SADD",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 550,
+        "y": 140,
+        "wires": [
+            [
+                "caa7a41ebc6422e8"
+            ]
+        ]
+    },
+    {
+        "id": "329f6e30fc821052",
+        "type": "redis-command",
+        "z": "e9a9c99b8f4ae041",
+        "g": "f04c5ec02d728f4f",
+        "server": "76c58f0d464bae79",
+        "command": "HSET",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 1130,
+        "y": 100,
+        "wires": [
+            [
+                "9d39429a785733f2"
+            ]
+        ]
+    },
+    {
+        "id": "9fdba98f2106e1d8",
+        "type": "redis-command",
+        "z": "e9a9c99b8f4ae041",
+        "g": "f0de13d4874edb38",
+        "server": "76c58f0d464bae79",
+        "command": "SREM",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 780,
+        "y": 320,
+        "wires": [
+            [
+                "fe5b854ddb3cd354"
+            ]
+        ]
+    },
+    {
+        "id": "9741c4430bb3724f",
+        "type": "redis-command",
+        "z": "e9a9c99b8f4ae041",
+        "g": "bff4019179dc7ff1",
+        "server": "76c58f0d464bae79",
+        "command": "FT.CREATE",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 800,
+        "y": 700,
+        "wires": [
+            [
+                "5402879ec1d9384c"
+            ]
+        ]
+    },
+    {
+        "id": "9dc54f7fc05b102d",
+        "type": "redis-command",
+        "z": "e9a9c99b8f4ae041",
+        "g": "bf88d536dfca69dc",
+        "server": "76c58f0d464bae79",
+        "command": "INCR",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 610,
+        "y": 460,
+        "wires": [
+            [
+                "550e60a718f7ab81"
+            ]
+        ]
+    },
+    {
+        "id": "8afacdd3220582f6",
+        "type": "redis-command",
+        "z": "e9a9c99b8f4ae041",
+        "g": "bf88d536dfca69dc",
+        "server": "76c58f0d464bae79",
+        "command": "JSON.SET",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 1000,
+        "y": 460,
+        "wires": [
+            [
+                "7591e80cb66d71f9"
+            ]
+        ]
+    },
+    {
+        "id": "7fd862ea9f49777d",
+        "type": "http in",
+        "z": "e9a9c99b8f4ae041",
+        "g": "ca49011520a2cdaa",
+        "name": "",
+        "url": "/ticket/search",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 580,
+        "wires": [
+            [
+                "e6812143b0a26210"
+            ]
+        ]
+    },
+    {
+        "id": "2642befe6f3cdf71",
+        "type": "http in",
+        "z": "e9a9c99b8f4ae041",
+        "g": "bf88d536dfca69dc",
+        "name": "",
+        "url": "/ticket/buy",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 460,
+        "wires": [
+            [
+                "53453f56332e811d"
+            ]
+        ]
+    },
+    {
+        "id": "345501ba606f3124",
+        "type": "redis-command",
+        "z": "e9a9c99b8f4ae041",
+        "g": "ca49011520a2cdaa",
+        "server": "76c58f0d464bae79",
+        "command": "FT.SEARCH",
+        "name": "",
+        "topic": "",
+        "params": "[\"ticketsIdx\",\"*\"]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": true,
+        "x": 750,
+        "y": 580,
+        "wires": [
+            [
+                "3fca14b6d86b89ce"
+            ]
+        ]
+    },
+    {
+        "id": "76c58f0d464bae79",
+        "type": "redis-config",
+        "name": "Local",
+        "options": "{\"host\":\"redis-stack\",\"port\":\"6379\",\"db\":0}",
+        "cluster": false,
+        "optionsType": "json"
+    },
+    {
+        "id": "0e887ce73e2b03ea",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-redis": "1.4.0"
+        }
+    }
+]

@@ -1,0 +1,1268 @@
+[
+    {
+        "id": "2a17f879452585ca",
+        "type": "tab",
+        "label": "Client",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dee1ebe0412b6e43",
+        "type": "tab",
+        "label": "Server",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "31bcf6677711c471",
+        "type": "tab",
+        "label": "Ejemplo Uso Redis",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2916b586326a0451",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "237064df747e741a",
+        "type": "group",
+        "z": "2a17f879452585ca",
+        "name": "Login",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "9c3a2aa8fe31a9b1",
+            "7c9c8b79340b7ff7",
+            "07ed25a4e8d4a771",
+            "2b14fbd6333d7f19"
+        ],
+        "x": 234,
+        "y": 99,
+        "w": 712,
+        "h": 142
+    },
+    {
+        "id": "edde0ad3b0dce600",
+        "type": "group",
+        "z": "2a17f879452585ca",
+        "name": "Tiket",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b099751fb7d6bf1b",
+            "b21576633d3e5237",
+            "806bb1194cb4cc15",
+            "a9af2d6ce60113e0"
+        ],
+        "x": 234,
+        "y": 279,
+        "w": 702,
+        "h": 142
+    },
+    {
+        "id": "dbe686e367503659",
+        "type": "group",
+        "z": "2a17f879452585ca",
+        "name": "Logout",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b8be48c940f147b0",
+            "20cb8746108ed1a4",
+            "e3cd6f2b94f3c655",
+            "86cdf801091e14d7"
+        ],
+        "x": 234,
+        "y": 439,
+        "w": 732,
+        "h": 142
+    },
+    {
+        "id": "9393674da95906e6",
+        "type": "group",
+        "z": "2a17f879452585ca",
+        "name": "Search",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "a0b294cbe213af0b",
+            "049ec50d4cd4f264",
+            "c097fca7ebbb99e7",
+            "6a78322ae0d5b34b"
+        ],
+        "x": 234,
+        "y": 639,
+        "w": 732,
+        "h": 142
+    },
+    {
+        "id": "53735a90433c6ce0",
+        "type": "group",
+        "z": "dee1ebe0412b6e43",
+        "name": "Login",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "bc025da92280b328",
+            "ee1813e6ea8fde55",
+            "0c4d143fa0b146b1",
+            "e978966d93b74844",
+            "c849f07936fbe6fd",
+            "05e6a2fa0d975c96",
+            "1513f381cf475c6e",
+            "f16246b3c2a1baca",
+            "fb123a71d4b35539"
+        ],
+        "x": 34,
+        "y": 39,
+        "w": 1272,
+        "h": 182
+    },
+    {
+        "id": "edb31b1c488720b5",
+        "type": "group",
+        "z": "dee1ebe0412b6e43",
+        "name": "Logout",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6755c9a712f4d6db",
+            "ab69c4109ffb613e",
+            "34074a82ab04deea",
+            "7474b8354d8907b0",
+            "f9d86986f874c401"
+        ],
+        "x": 214,
+        "y": 259,
+        "w": 792,
+        "h": 122
+    },
+    {
+        "id": "3a2391177df7c93f",
+        "type": "group",
+        "z": "dee1ebe0412b6e43",
+        "name": "Create Index",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "fb1598782a2c5b76",
+            "9af4d2722b942641",
+            "27950c63b2307e0e",
+            "aacd00a0d73b5875"
+        ],
+        "x": 294,
+        "y": 679,
+        "w": 822,
+        "h": 82
+    },
+    {
+        "id": "b77f2fa045527384",
+        "type": "group",
+        "z": "dee1ebe0412b6e43",
+        "name": "Buy Ticket",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "7a03f9fe0ff65da6",
+            "9d031763cd28b5c9"
+        ],
+        "x": 94,
+        "y": 419,
+        "w": 1152,
+        "h": 82
+    },
+    {
+        "id": "a04c7cc412cdde02",
+        "type": "group",
+        "z": "dee1ebe0412b6e43",
+        "name": "Search",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8d454c433ff70cf7",
+            "dd89b0dfbe278306"
+        ],
+        "x": 154,
+        "y": 539,
+        "w": 1092,
+        "h": 82
+    },
+    {
+        "id": "2ec6c930119ed7c3",
+        "type": "redis-config",
+        "name": "Local",
+        "options": "{\"name\":\"Redis Stack\",\"host\":\"redis-stack\",\"port\":\"6379\",\"password\":\"\",\"db\":\"0\",\"tls\":false,\"options\":\"\",\"cluster\":false,\"sentinels\":\"\",\"mode\":\"standard\"}",
+        "cluster": false,
+        "optionsType": "json"
+    },
+    {
+        "id": "0c321b788c2deb45",
+        "type": "redis-config",
+        "name": "Conexion Redis",
+        "options": "{\"host\":\"redis-stack\",\"port\":\"6379\",\"db\":0}",
+        "cluster": false,
+        "optionsType": "json"
+    },
+    {
+        "id": "9c3a2aa8fe31a9b1",
+        "type": "inject",
+        "z": "2a17f879452585ca",
+        "g": "237064df747e741a",
+        "name": "usuario 1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"user\":\"usuario1\"}",
+        "payloadType": "json",
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "07ed25a4e8d4a771"
+            ]
+        ]
+    },
+    {
+        "id": "7c9c8b79340b7ff7",
+        "type": "inject",
+        "z": "2a17f879452585ca",
+        "g": "237064df747e741a",
+        "name": "usuario 2",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"user\":\"usuario2\"}",
+        "payloadType": "json",
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "07ed25a4e8d4a771"
+            ]
+        ]
+    },
+    {
+        "id": "b099751fb7d6bf1b",
+        "type": "inject",
+        "z": "2a17f879452585ca",
+        "g": "edde0ad3b0dce600",
+        "name": "usuario 1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"user\":\"usuario1\", \"id\": \"12345678A\"}",
+        "payloadType": "json",
+        "x": 340,
+        "y": 320,
+        "wires": [
+            [
+                "806bb1194cb4cc15"
+            ]
+        ]
+    },
+    {
+        "id": "b21576633d3e5237",
+        "type": "inject",
+        "z": "2a17f879452585ca",
+        "g": "edde0ad3b0dce600",
+        "name": "usuario 2",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"user\":\"usuario2\", \"id\": \"98765432B\"}",
+        "payloadType": "json",
+        "x": 340,
+        "y": 380,
+        "wires": [
+            [
+                "806bb1194cb4cc15"
+            ]
+        ]
+    },
+    {
+        "id": "b8be48c940f147b0",
+        "type": "inject",
+        "z": "2a17f879452585ca",
+        "g": "dbe686e367503659",
+        "name": "usuario 1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"user\":\"usuario1\"}",
+        "payloadType": "json",
+        "x": 340,
+        "y": 480,
+        "wires": [
+            [
+                "e3cd6f2b94f3c655"
+            ]
+        ]
+    },
+    {
+        "id": "20cb8746108ed1a4",
+        "type": "inject",
+        "z": "2a17f879452585ca",
+        "g": "dbe686e367503659",
+        "name": "usuario 2",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"user\":\"usuario2\"}",
+        "payloadType": "json",
+        "x": 340,
+        "y": 540,
+        "wires": [
+            [
+                "e3cd6f2b94f3c655"
+            ]
+        ]
+    },
+    {
+        "id": "07ed25a4e8d4a771",
+        "type": "http request",
+        "z": "2a17f879452585ca",
+        "g": "237064df747e741a",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "body",
+        "url": "http://localhost:1880/user/login",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 650,
+        "y": 160,
+        "wires": [
+            [
+                "2b14fbd6333d7f19"
+            ]
+        ]
+    },
+    {
+        "id": "806bb1194cb4cc15",
+        "type": "http request",
+        "z": "2a17f879452585ca",
+        "g": "edde0ad3b0dce600",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:1880/ticket/buy",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 650,
+        "y": 360,
+        "wires": [
+            [
+                "a9af2d6ce60113e0"
+            ]
+        ]
+    },
+    {
+        "id": "e3cd6f2b94f3c655",
+        "type": "http request",
+        "z": "2a17f879452585ca",
+        "g": "dbe686e367503659",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:1880/user/logout",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 650,
+        "y": 520,
+        "wires": [
+            [
+                "86cdf801091e14d7"
+            ]
+        ]
+    },
+    {
+        "id": "2b14fbd6333d7f19",
+        "type": "debug",
+        "z": "2a17f879452585ca",
+        "g": "237064df747e741a",
+        "name": "debug 39",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "a9af2d6ce60113e0",
+        "type": "debug",
+        "z": "2a17f879452585ca",
+        "g": "edde0ad3b0dce600",
+        "name": "debug 40",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "86cdf801091e14d7",
+        "type": "debug",
+        "z": "2a17f879452585ca",
+        "g": "dbe686e367503659",
+        "name": "debug 41",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "a0b294cbe213af0b",
+        "type": "inject",
+        "z": "2a17f879452585ca",
+        "g": "9393674da95906e6",
+        "name": "usuario 1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"user\":\"usuario1\"}",
+        "payloadType": "json",
+        "x": 340,
+        "y": 680,
+        "wires": [
+            [
+                "c097fca7ebbb99e7"
+            ]
+        ]
+    },
+    {
+        "id": "049ec50d4cd4f264",
+        "type": "inject",
+        "z": "2a17f879452585ca",
+        "g": "9393674da95906e6",
+        "name": "usuario 2",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"user\":\"usuario2\"}",
+        "payloadType": "json",
+        "x": 340,
+        "y": 740,
+        "wires": [
+            [
+                "c097fca7ebbb99e7"
+            ]
+        ]
+    },
+    {
+        "id": "c097fca7ebbb99e7",
+        "type": "http request",
+        "z": "2a17f879452585ca",
+        "g": "9393674da95906e6",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:1880/ticket/search",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 650,
+        "y": 720,
+        "wires": [
+            [
+                "6a78322ae0d5b34b"
+            ]
+        ]
+    },
+    {
+        "id": "6a78322ae0d5b34b",
+        "type": "debug",
+        "z": "2a17f879452585ca",
+        "g": "9393674da95906e6",
+        "name": "debug 48",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "5156a49aa76a614e",
+        "type": "comment",
+        "z": "2a17f879452585ca",
+        "name": "",
+        "info": "# Contexto\nSe precisa un sistema que sirva como backend para un sistema de compra de tickets.\n\n## Operativa\nEl usuario realiza el login para entrar a la plataforma, compra la entrada y realiza el logout.\n\n## Requisitos\n- El sistema debe ofrecer los endopoints necesarios para cubrir la operativa:\n1. Login\n2. Comprar\n3. Logout\n4. Listar los tickets adquiridos por usuario\n- El sistema debe verificar que el usuario no ha realizado el login dos veces simultaneamente\n- Se debe utilizar Redis como almacenamiento\n- cuando un nuevo usuario realiza el login, el sistema debe almacenarlo\n- se debe utilizar dos estructuras de datos distintas, además de un índice",
+        "x": 1220,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "bc025da92280b328",
+        "type": "http in",
+        "z": "dee1ebe0412b6e43",
+        "g": "53735a90433c6ce0",
+        "name": "",
+        "url": "/user/login",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "05e6a2fa0d975c96",
+                "e978966d93b74844"
+            ]
+        ]
+    },
+    {
+        "id": "6755c9a712f4d6db",
+        "type": "http in",
+        "z": "dee1ebe0412b6e43",
+        "g": "edb31b1c488720b5",
+        "name": "",
+        "url": "/user/logout",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 330,
+        "y": 340,
+        "wires": [
+            [
+                "34074a82ab04deea"
+            ]
+        ]
+    },
+    {
+        "id": "ee1813e6ea8fde55",
+        "type": "http response",
+        "z": "dee1ebe0412b6e43",
+        "g": "53735a90433c6ce0",
+        "name": "",
+        "statusCode": "500",
+        "headers": {},
+        "x": 940,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "0c4d143fa0b146b1",
+        "type": "http response",
+        "z": "dee1ebe0412b6e43",
+        "g": "53735a90433c6ce0",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1220,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "ab69c4109ffb613e",
+        "type": "http response",
+        "z": "dee1ebe0412b6e43",
+        "g": "edb31b1c488720b5",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 900,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "fb1598782a2c5b76",
+        "type": "inject",
+        "z": "dee1ebe0412b6e43",
+        "g": "3a2391177df7c93f",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 390,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9af4d2722b942641",
+        "type": "debug",
+        "z": "dee1ebe0412b6e43",
+        "g": "3a2391177df7c93f",
+        "name": "debug 46",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "7a03f9fe0ff65da6",
+        "type": "http response",
+        "z": "dee1ebe0412b6e43",
+        "g": "b77f2fa045527384",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1160,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "8d454c433ff70cf7",
+        "type": "http response",
+        "z": "dee1ebe0412b6e43",
+        "g": "a04c7cc412cdde02",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1160,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "dd89b0dfbe278306",
+        "type": "http in",
+        "z": "dee1ebe0412b6e43",
+        "g": "a04c7cc412cdde02",
+        "name": "",
+        "url": "/ticket/search",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9d031763cd28b5c9",
+        "type": "http in",
+        "z": "dee1ebe0412b6e43",
+        "g": "b77f2fa045527384",
+        "name": "",
+        "url": "/ticket/buy",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e978966d93b74844",
+        "type": "debug",
+        "z": "dee1ebe0412b6e43",
+        "g": "53735a90433c6ce0",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 260,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "c849f07936fbe6fd",
+        "type": "redis-command",
+        "z": "dee1ebe0412b6e43",
+        "g": "53735a90433c6ce0",
+        "server": "0c321b788c2deb45",
+        "command": "HSET",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 1050,
+        "y": 80,
+        "wires": [
+            [
+                "0c4d143fa0b146b1"
+            ]
+        ]
+    },
+    {
+        "id": "05e6a2fa0d975c96",
+        "type": "function",
+        "z": "dee1ebe0412b6e43",
+        "g": "53735a90433c6ce0",
+        "name": "function 1",
+        "func": "msg.request = msg.payload\n\nmsg.payload = [\n    \"connected_users\", msg.payload.user\n    ];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 160,
+        "wires": [
+            [
+                "1513f381cf475c6e",
+                "f16246b3c2a1baca"
+            ]
+        ]
+    },
+    {
+        "id": "1513f381cf475c6e",
+        "type": "debug",
+        "z": "dee1ebe0412b6e43",
+        "g": "53735a90433c6ce0",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f16246b3c2a1baca",
+        "type": "redis-command",
+        "z": "dee1ebe0412b6e43",
+        "g": "53735a90433c6ce0",
+        "server": "0c321b788c2deb45",
+        "command": "SADD",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 550,
+        "y": 160,
+        "wires": [
+            [
+                "fb123a71d4b35539"
+            ]
+        ]
+    },
+    {
+        "id": "34074a82ab04deea",
+        "type": "function",
+        "z": "dee1ebe0412b6e43",
+        "g": "edb31b1c488720b5",
+        "name": "function 3",
+        "func": "msg.payload = [\n    \"connected_users\", msg.payload.user\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 340,
+        "wires": [
+            [
+                "7474b8354d8907b0"
+            ]
+        ]
+    },
+    {
+        "id": "7474b8354d8907b0",
+        "type": "redis-command",
+        "z": "dee1ebe0412b6e43",
+        "g": "edb31b1c488720b5",
+        "server": "0c321b788c2deb45",
+        "command": "SREM",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 710,
+        "y": 340,
+        "wires": [
+            [
+                "ab69c4109ffb613e",
+                "f9d86986f874c401"
+            ]
+        ]
+    },
+    {
+        "id": "f9d86986f874c401",
+        "type": "debug",
+        "z": "dee1ebe0412b6e43",
+        "g": "edb31b1c488720b5",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "fb123a71d4b35539",
+        "type": "switch",
+        "z": "dee1ebe0412b6e43",
+        "g": "53735a90433c6ce0",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 750,
+        "y": 160,
+        "wires": [
+            [
+                "e3bca671ddb1448c"
+            ],
+            [
+                "ee1813e6ea8fde55"
+            ]
+        ]
+    },
+    {
+        "id": "e3bca671ddb1448c",
+        "type": "function",
+        "z": "dee1ebe0412b6e43",
+        "name": "function 2",
+        "func": "msg.payload = [`user:${new Date().getMilliseconds()}`, \"user\", msg.request.user];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 871.8958129882812,
+        "y": 82.90277099609375,
+        "wires": [
+            [
+                "c849f07936fbe6fd"
+            ]
+        ]
+    },
+    {
+        "id": "27950c63b2307e0e",
+        "type": "function",
+        "z": "dee1ebe0412b6e43",
+        "g": "3a2391177df7c93f",
+        "name": "function 4",
+        "func": "",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aacd00a0d73b5875",
+        "type": "redis-command",
+        "z": "dee1ebe0412b6e43",
+        "g": "3a2391177df7c93f",
+        "server": "0c321b788c2deb45",
+        "command": "FT.CREATE",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 750,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec854134c144b615",
+        "type": "redis-command",
+        "z": "31bcf6677711c471",
+        "server": "0c321b788c2deb45",
+        "command": "SET",
+        "name": "",
+        "topic": "",
+        "params": "[\"name\",\"daniel\"]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 560,
+        "y": 180,
+        "wires": [
+            [
+                "819fe321bd76483b"
+            ]
+        ]
+    },
+    {
+        "id": "30da0525f1cd7d3f",
+        "type": "inject",
+        "z": "31bcf6677711c471",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 180,
+        "wires": [
+            [
+                "ec854134c144b615"
+            ]
+        ]
+    },
+    {
+        "id": "819fe321bd76483b",
+        "type": "debug",
+        "z": "31bcf6677711c471",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "7d22957a64e018c1",
+        "type": "redis-command",
+        "z": "31bcf6677711c471",
+        "server": "0c321b788c2deb45",
+        "command": "GET",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 540,
+        "y": 260,
+        "wires": [
+            [
+                "995d9d3b4634b60c"
+            ]
+        ]
+    },
+    {
+        "id": "e71b41b52d7d7ba8",
+        "type": "inject",
+        "z": "31bcf6677711c471",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "country",
+                "v": "spain",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[\"name\"]",
+        "payloadType": "json",
+        "x": 200,
+        "y": 260,
+        "wires": [
+            [
+                "7d22957a64e018c1"
+            ]
+        ]
+    },
+    {
+        "id": "995d9d3b4634b60c",
+        "type": "debug",
+        "z": "31bcf6677711c471",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e3168c5e50c73398",
+        "type": "redis-in",
+        "z": "2916b586326a0451",
+        "server": "0c321b788c2deb45",
+        "command": "subscribe",
+        "name": "",
+        "topic": "abastos",
+        "obj": true,
+        "timeout": 0,
+        "x": 390,
+        "y": 280,
+        "wires": [
+            [
+                "90245e65893a3a2d"
+            ]
+        ]
+    },
+    {
+        "id": "c3d4b4701a088c64",
+        "type": "redis-out",
+        "z": "2916b586326a0451",
+        "server": "0c321b788c2deb45",
+        "command": "publish",
+        "name": "",
+        "topic": "abastos",
+        "obj": true,
+        "x": 740,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "affa3a393eac041f",
+        "type": "inject",
+        "z": "2916b586326a0451",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "c3d4b4701a088c64"
+            ]
+        ]
+    },
+    {
+        "id": "90245e65893a3a2d",
+        "type": "debug",
+        "z": "2916b586326a0451",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a481eae345c6d6f4",
+        "type": "redis-in",
+        "z": "2916b586326a0451",
+        "server": "0c321b788c2deb45",
+        "command": "subscribe",
+        "name": "",
+        "topic": "abastos",
+        "obj": true,
+        "timeout": 0,
+        "x": 390,
+        "y": 440,
+        "wires": [
+            [
+                "b8ecef23ce1de301"
+            ]
+        ]
+    },
+    {
+        "id": "b8ecef23ce1de301",
+        "type": "debug",
+        "z": "2916b586326a0451",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "93c689917763f67b",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-redis": "1.4.0"
+        }
+    }
+]

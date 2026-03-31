@@ -1,0 +1,80 @@
+CREATE
+(u1:User {id:1, name:'Daniel', username:'danielpm'}),
+(u2:User {id:2, name:'Javier', username:'javiyomejas'}),
+(u3:User {id:3, name:'Diego', username:'diegg.o'}),
+(u4:User {id:4, name:'Luis', username:'sourfer'}),
+(u5:User {id:5, name:'Enac', username:'enacrm'}),
+(u6:User {id:6, name:'Pedro', username:'patilla'}),
+(u7:User {id:7, name:'Sofia', username:'sofia'}),
+(u8:User {id:8, name:'Claudia', username:'claudia'}),
+(u9:User {id:9, name:'Elena', username:'elena'}),
+(u10:User {id:10, name:'Carmen', username:'carmen'}),
+(u11:User {id:11, name:'Pablo', username:'pablo'}),
+(u12:User {id:12, name:'Alejandro', username:'alejandro'});
+
+
+CREATE
+(p1:Post {id:101, content:'Hola a todos, empezando con Neo4j', date:'2023-10-01'}),
+(p2:Post {id:102, content:'Foto de mis vacaciones en Valencia', date:'2023-10-02'}),
+(p3:Post {id:103, content:'Excelente día para programar', date:'2023-10-03'}),
+(p4:Post {id:104, content:'¿Alguien para jugar fútbol?', date:'2023-10-04'});
+
+
+MATCH (a:User {name:'Daniel'}), (b:User {name:'Javier'}) CREATE (a)-[:FRIEND_OF]->(b), (b)-[:FRIEND_OF]->(a);
+MATCH (a:User {name:'Javier'}), (b:User {name:'Diego'}) CREATE (a)-[:FRIEND_OF]->(b), (b)-[:FRIEND_OF]->(a);
+MATCH (a:User {name:'Luis'}), (b:User {name:'Enac'}) CREATE (a)-[:FRIEND_OF]->(b), (b)-[:FRIEND_OF]->(a);
+MATCH (a:User {name:'Sofia'}), (b:User {name:'Claudia'}) CREATE (a)-[:FRIEND_OF]->(b), (b)-[:FRIEND_OF]->(a);
+MATCH (a:User {name:'Pedro'}), (b:User {name:'Elena'}) CREATE (a)-[:FRIEND_OF]->(b), (b)-[:FRIEND_OF]->(a);
+
+
+MATCH (a:User {name:'Enac'}), (b:User {name:'Pedro'}) CREATE (a)-[:FOLLOWS]->(b);
+MATCH (a:User {name:'Pedro'}), (b:User {name:'Sofia'}) CREATE (a)-[:FOLLOWS]->(b);
+MATCH (a:User {name:'Sofia'}), (b:User {name:'Daniel'}) CREATE (a)-[:FOLLOWS]->(b);
+MATCH (a:User {name:'Carmen'}), (b:User {name:'Sofia'}) CREATE (a)-[:FOLLOWS]->(b);
+MATCH (a:User {name:'Pablo'}), (b:User {name:'Javier'}) CREATE (a)-[:FOLLOWS]->(b);
+
+
+MATCH (u:User {name:'Daniel'}), (p:Post {id:101}) CREATE (u)-[:POSTED]->(p);
+MATCH (u:User {name:'Javier'}), (p:Post {id:102}) CREATE (u)-[:POSTED]->(p);
+MATCH (u:User {name:'Sofia'}), (p:Post {id:103}) CREATE (u)-[:POSTED]->(p);
+MATCH (u:User {name:'Diego'}), (p:Post {id:104}) CREATE (u)-[:POSTED]->(p);
+
+
+MATCH (u:User {name:'Luis'}), (p:Post {id:101}) CREATE (u)-[:LIKED]->(p);
+MATCH (u:User {name:'Enac'}), (p:Post {id:101}) CREATE (u)-[:LIKED]->(p);
+MATCH (u:User {name:'Daniel'}), (p:Post {id:102}) CREATE (u)-[:LIKED]->(p);
+MATCH (u:User {name:'Claudia'}), (p:Post {id:103}) CREATE (u)-[:LIKED]->(p);
+
+
+MATCH (u:User)
+RETURN u;
+
+
+MATCH (u:User {name: 'Daniel'})-[:FRIEND_OF]->(amigo)
+RETURN amigo.name AS nombreAmigo;
+
+
+MATCH (seguidor:User)-[:FOLLOWS]->(u:User {name: 'Sofia'})
+RETURN seguidor.name AS nombreSeguidor;
+
+
+MATCH (u:User {name: 'Daniel'})-[:POSTED]->(post:Post)
+RETURN post.content, post.date;
+
+
+MATCH (u:User)-[:LIKED]->(p:Post {id: 101})
+RETURN u.name AS nombreUsuario;
+
+
+MATCH (autor:User {name: 'Javier'})-[:POSTED]->(p:Post)<-[:LIKED]-(liker:User)
+RETURN liker.name AS UsuarioQueDioLike, p.content AS EnElPost;
+
+
+MATCH (yo:User {name: 'Daniel'})-[:FRIEND_OF]-(amigo)-[:FRIEND_OF]-(fof)
+WHERE yo <> fof
+RETURN DISTINCT fof.name AS AmigoDeAmigo;
+
+
+MATCH (inicio:User {name: 'Enac'})-[*1..3]-(conectado:User)
+WHERE inicio <> conectado
+RETURN DISTINCT conectado.name;

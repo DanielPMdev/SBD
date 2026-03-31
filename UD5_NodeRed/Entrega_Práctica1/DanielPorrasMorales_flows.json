@@ -1,0 +1,255 @@
+[
+    {
+        "id": "461f8fd6ef2de671",
+        "type": "tab",
+        "label": "Ejercicio",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "79853f523ab56aa2",
+        "type": "group",
+        "z": "461f8fd6ef2de671",
+        "name": "Petición - Escritura",
+        "style": {
+            "stroke": "#ffff3f",
+            "label": true,
+            "color": "#000000",
+            "fill": "#ffffbf"
+        },
+        "nodes": [
+            "187a7e11b93fc4ff",
+            "b8bfd3eae831ce92",
+            "3d2a38ff002145f1",
+            "a68f43df502e0d72",
+            "1105c9289bda16ea"
+        ],
+        "x": 174,
+        "y": 119,
+        "w": 572,
+        "h": 182
+    },
+    {
+        "id": "884f849ee975f7a6",
+        "type": "group",
+        "z": "461f8fd6ef2de671",
+        "name": "Lectura",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#e3f3d3",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "e59065dd111496ef",
+            "68946f02986c6b68",
+            "52ac0c2ff26bc960",
+            "6a05326e47e52a88"
+        ],
+        "x": 114,
+        "y": 339,
+        "w": 872,
+        "h": 82
+    },
+    {
+        "id": "636b8a424e8ae94e",
+        "type": "comment",
+        "z": "461f8fd6ef2de671",
+        "name": "Tarea Enunciado",
+        "info": "https://archive-api.open-meteo.com/v1/archive?latitude={{{latitude}}}&longitude={{{longitude}}}&start_date={{{start_date}}}&end_date={{{end_date}}}&hourly=temperature_2m&timezone=auto\n\n\n\nlatitude: 39.468394\nlongitude: -0.387602\n\nSe precisa diseñar una ETL \nue obtenga los datos de la \nurl dada cuando se dispare el \nflujo, se almacenan en un fichero\nJSON",
+        "x": 800,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "a68f43df502e0d72",
+        "type": "http request",
+        "z": "461f8fd6ef2de671",
+        "g": "79853f523ab56aa2",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "query",
+        "url": "https://archive-api.open-meteo.com/v1/archive?latitude={{{latitude}}}&longitude={{{longitude}}}&start_date={{{start_date}}}&end_date={{{end_date}}}&hourly=temperature_2m&timezone=auto",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 470,
+        "y": 160,
+        "wires": [
+            [
+                "3d2a38ff002145f1"
+            ]
+        ]
+    },
+    {
+        "id": "1105c9289bda16ea",
+        "type": "inject",
+        "z": "461f8fd6ef2de671",
+        "g": "79853f523ab56aa2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"latitude\":39.468394,\"longitude\":-0.387602,\"start_date\":\"2025-11-03\",\"end_date\":\"2025-11-05\"}",
+        "payloadType": "json",
+        "x": 270,
+        "y": 160,
+        "wires": [
+            [
+                "a68f43df502e0d72"
+            ]
+        ]
+    },
+    {
+        "id": "187a7e11b93fc4ff",
+        "type": "debug",
+        "z": "461f8fd6ef2de671",
+        "g": "79853f523ab56aa2",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3d2a38ff002145f1",
+        "type": "json",
+        "z": "461f8fd6ef2de671",
+        "g": "79853f523ab56aa2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 670,
+        "y": 160,
+        "wires": [
+            [
+                "b8bfd3eae831ce92"
+            ]
+        ]
+    },
+    {
+        "id": "b8bfd3eae831ce92",
+        "type": "file",
+        "z": "461f8fd6ef2de671",
+        "g": "79853f523ab56aa2",
+        "name": "",
+        "filename": "open_meteo_datos.json",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 370,
+        "y": 260,
+        "wires": [
+            [
+                "187a7e11b93fc4ff"
+            ]
+        ]
+    },
+    {
+        "id": "68946f02986c6b68",
+        "type": "file in",
+        "z": "461f8fd6ef2de671",
+        "g": "884f849ee975f7a6",
+        "name": "",
+        "filename": "open_meteo_datos.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 490,
+        "y": 380,
+        "wires": [
+            [
+                "6a05326e47e52a88"
+            ]
+        ]
+    },
+    {
+        "id": "52ac0c2ff26bc960",
+        "type": "inject",
+        "z": "461f8fd6ef2de671",
+        "g": "884f849ee975f7a6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 380,
+        "wires": [
+            [
+                "68946f02986c6b68"
+            ]
+        ]
+    },
+    {
+        "id": "e59065dd111496ef",
+        "type": "debug",
+        "z": "461f8fd6ef2de671",
+        "g": "884f849ee975f7a6",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "6a05326e47e52a88",
+        "type": "json",
+        "z": "461f8fd6ef2de671",
+        "g": "884f849ee975f7a6",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 710,
+        "y": 380,
+        "wires": [
+            [
+                "e59065dd111496ef"
+            ]
+        ]
+    }
+]

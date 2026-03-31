@@ -1,0 +1,430 @@
+[
+    {
+        "id": "249bab61e4c6a354",
+        "type": "tab",
+        "label": "Ejercicio Radares",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2efd15caf9e40e10",
+        "type": "group",
+        "z": "249bab61e4c6a354",
+        "name": "Cliente",
+        "style": {
+            "fill": "#addb7b",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "ee0113c8b6c1d892",
+            "9af0c591ef62a84f",
+            "d99e25c08d270407",
+            "82b57682610c43d0"
+        ],
+        "x": 114,
+        "y": 339,
+        "w": 772,
+        "h": 142
+    },
+    {
+        "id": "656d194244b73195",
+        "type": "group",
+        "z": "249bab61e4c6a354",
+        "name": "Server",
+        "style": {
+            "fill": "#7fb7df",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "9f5b49c0066c82eb"
+        ],
+        "x": 114,
+        "y": 219,
+        "w": 212,
+        "h": 82
+    },
+    {
+        "id": "013b2d0543b820e8",
+        "type": "group",
+        "z": "249bab61e4c6a354",
+        "name": "API",
+        "style": {
+            "stroke": "#ff7f7f",
+            "label": true,
+            "color": "#000000",
+            "fill": "#ff7f7f"
+        },
+        "nodes": [
+            "22c1a2f464326a9b",
+            "cd991f76a8493667",
+            "960c083bbd85f22d"
+        ],
+        "x": 174,
+        "y": 499,
+        "w": 632,
+        "h": 82
+    },
+    {
+        "id": "dd76676121687e59",
+        "type": "group",
+        "z": "249bab61e4c6a354",
+        "name": "Consulta",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#c8e7a7",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "42fae0c3784f5099",
+            "939164de8371d2aa",
+            "d942ba3da875def5"
+        ],
+        "x": 414,
+        "y": 219,
+        "w": 532,
+        "h": 82
+    },
+    {
+        "id": "8708d08ff5cf1872",
+        "type": "inject",
+        "z": "249bab61e4c6a354",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "ca9bdb9001f77285"
+            ]
+        ]
+    },
+    {
+        "id": "ca9bdb9001f77285",
+        "type": "data-generator",
+        "z": "249bab61e4c6a354",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "json",
+        "template": "{\n    \"car_id\": \"{{int 0 9}}{{int 0 9}}{{int 0 9}}{{int 0 9}}{{char \"ABCDEF\"}}{{char \"ABCDEF\"}}{{char \"ABCDEF\"}}\"\n}\n\n",
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "9ecc52c925fb539b"
+            ]
+        ]
+    },
+    {
+        "id": "1e9d23bf72f0f349",
+        "type": "debug",
+        "z": "249bab61e4c6a354",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9ecc52c925fb539b",
+        "type": "function",
+        "z": "249bab61e4c6a354",
+        "name": "function 7",
+        "func": "msg.payload.moment = Date.now()\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 120,
+        "wires": [
+            [
+                "1e9d23bf72f0f349",
+                "9f5b49c0066c82eb"
+            ]
+        ]
+    },
+    {
+        "id": "ee0113c8b6c1d892",
+        "type": "websocket in",
+        "z": "249bab61e4c6a354",
+        "g": "2efd15caf9e40e10",
+        "name": "",
+        "server": "",
+        "client": "30ec7e7bec37fe30",
+        "x": 270,
+        "y": 440,
+        "wires": [
+            [
+                "9af0c591ef62a84f"
+            ]
+        ]
+    },
+    {
+        "id": "9f5b49c0066c82eb",
+        "type": "websocket out",
+        "z": "249bab61e4c6a354",
+        "g": "656d194244b73195",
+        "name": "",
+        "server": "cd3ae50865020fc6",
+        "client": "",
+        "x": 220,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "22c1a2f464326a9b",
+        "type": "http in",
+        "z": "249bab61e4c6a354",
+        "g": "013b2d0543b820e8",
+        "name": "",
+        "url": "/context/car",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 280,
+        "y": 540,
+        "wires": [
+            [
+                "960c083bbd85f22d"
+            ]
+        ]
+    },
+    {
+        "id": "cd991f76a8493667",
+        "type": "http response",
+        "z": "249bab61e4c6a354",
+        "g": "013b2d0543b820e8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "960c083bbd85f22d",
+        "type": "data-generator",
+        "z": "249bab61e4c6a354",
+        "g": "013b2d0543b820e8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "json",
+        "template": "{\n    \"pais\": \"{{country}}\",\n    \"dirección\": \"{{int 1 100}} {{street}}\",\n    \"propietario\": \"{{firstName}} {{lastName}}\",\n    \"año de fabricación\": \"{{int 1900 2025}}\"\n}",
+        "x": 520,
+        "y": 540,
+        "wires": [
+            [
+                "cd991f76a8493667"
+            ]
+        ]
+    },
+    {
+        "id": "9af0c591ef62a84f",
+        "type": "http request",
+        "z": "249bab61e4c6a354",
+        "g": "2efd15caf9e40e10",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:1880/context/car",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 590,
+        "y": 440,
+        "wires": [
+            [
+                "d99e25c08d270407",
+                "82b57682610c43d0"
+            ]
+        ]
+    },
+    {
+        "id": "d99e25c08d270407",
+        "type": "mongodb4",
+        "z": "249bab61e4c6a354",
+        "g": "2efd15caf9e40e10",
+        "clientNode": "b8347869f3281b79",
+        "mode": "collection",
+        "collection": "radar",
+        "operation": "insertOne",
+        "output": "toArray",
+        "maxTimeMS": "0",
+        "handleDocId": false,
+        "name": "",
+        "x": 780,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "42fae0c3784f5099",
+        "type": "debug",
+        "z": "249bab61e4c6a354",
+        "g": "dd76676121687e59",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "939164de8371d2aa",
+        "type": "mongodb4",
+        "z": "249bab61e4c6a354",
+        "g": "dd76676121687e59",
+        "clientNode": "b8347869f3281b79",
+        "mode": "collection",
+        "collection": "radar",
+        "operation": "find",
+        "output": "toArray",
+        "maxTimeMS": "0",
+        "handleDocId": false,
+        "name": "",
+        "x": 670,
+        "y": 260,
+        "wires": [
+            [
+                "42fae0c3784f5099"
+            ]
+        ]
+    },
+    {
+        "id": "d942ba3da875def5",
+        "type": "inject",
+        "z": "249bab61e4c6a354",
+        "g": "dd76676121687e59",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 510,
+        "y": 260,
+        "wires": [
+            [
+                "939164de8371d2aa"
+            ]
+        ]
+    },
+    {
+        "id": "82b57682610c43d0",
+        "type": "debug",
+        "z": "249bab61e4c6a354",
+        "g": "2efd15caf9e40e10",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "30ec7e7bec37fe30",
+        "type": "websocket-client",
+        "path": "ws://localhost:1880/ws/radar",
+        "tls": "",
+        "wholemsg": "false",
+        "hb": "0",
+        "subprotocol": "",
+        "headers": []
+    },
+    {
+        "id": "cd3ae50865020fc6",
+        "type": "websocket-listener",
+        "path": "/ws/radar",
+        "wholemsg": "false"
+    },
+    {
+        "id": "b8347869f3281b79",
+        "type": "mongodb4-client",
+        "name": "",
+        "protocol": "mongodb",
+        "hostname": "ud5_nodered-mongodb-1",
+        "port": "",
+        "dbName": "abastos",
+        "appName": "",
+        "authSource": "",
+        "authMechanism": "DEFAULT",
+        "tls": false,
+        "tlsCAFile": "",
+        "tlsCertificateKeyFile": "",
+        "tlsInsecure": false,
+        "connectTimeoutMS": "30000",
+        "socketTimeoutMS": "0",
+        "minPoolSize": "0",
+        "maxPoolSize": "100",
+        "maxIdleTimeMS": "0",
+        "uri": "",
+        "advanced": "{}",
+        "uriTabActive": "tab-uri-simple"
+    },
+    {
+        "id": "add83a883dae1ba8",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-node-data-generator": "1.0.2",
+            "node-red-contrib-mongodb4": "3.1.1"
+        }
+    }
+]
