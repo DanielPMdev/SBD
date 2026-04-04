@@ -43,6 +43,25 @@ Este repositorio compila todos los materiales formativos, ejercicios prácticos 
  ┃ ┃ ┣ 🐍 src/processor.py
  ┃ ┃ ┗ ⚙️ docker-compose.yaml
  ┃ ┗ 📋 README.md
+ ┣ 📂 UD10_VibeCoding
+ ┃ ┣ 🐍 main.py
+ ┃ ┣ ⚙️ requirements.txt
+ ┃ ┣ ⚙️ .env
+ ┃ ┣ 📂 src/
+ ┃ ┃ ┣ 📂 api/weather_router.py
+ ┃ ┃ ┣ 📂 services/weather_service.py
+ ┃ ┃ ┣ 📂 core/conversions.py, config.py
+ ┃ ┃ ┗ 📂 schemas/weather.py
+ ┃ ┣ 📂 tests/
+ ┃ ┃ ┣ 📂 unit/test_conversions.py
+ ┃ ┃ ┗ 📂 integration/test_weather_endpoint.py
+ ┃ ┣ 📂 docs/
+ ┃ ┃ ┣ 📄 PROMPT.md
+ ┃ ┃ ┣ 📄 SKILLS.md
+ ┃ ┃ ┣ 📄 PRD_Weather_AI_API_Specs.md
+ ┃ ┃ ┣ 📄 info.md
+ ┃ ┃ ┗ 📄 walkthrough.md
+ ┃ ┗ 📋 README.md
  ┗ 📋 README.md
 ```
 
@@ -116,6 +135,16 @@ Cúspide de la asignatura, donde se desarrolla de cero y de manera robusta una t
 **Conceptos clave:** `ETL en Vuelo` · `Broker Mensajería` · `Indexado Masivo`  
 **Tecnologías:** `Apache Kafka` · `ElasticSearch` · `Kibana`
 
+---
+
+### 10. Vibe Coding — Microservicio Meteorológico con FastAPI
+📂 [`UD10_VibeCoding/`](./UD10_VibeCoding/)
+
+Introducción al desarrollo de software asistido por IA (Vibe Coding). Se construye un microservicio REST completo con FastAPI que consume datos meteorológicos en tiempo real de Open-Meteo, aplica conversiones de unidades y expone un endpoint validado. Incluye arquitectura por capas, manejo de errores estandarizado y suite completa de tests (28 tests, 100% cobertura en lógica core).
+
+**Conceptos clave:** `Vibe Coding` · `Layered Architecture` · `API REST` · `Funciones Puras`  
+**Tecnologías:** `FastAPI` · `httpx` · `Pydantic v2` · `pytest`
+
 ## 🧰 Stack Tecnológico General
 
 | Tecnología | Rol |
@@ -131,6 +160,10 @@ Cúspide de la asignatura, donde se desarrolla de cero y de manera robusta una t
 | Power BI | Visualización en diferido resolviendo casos estáticos con macros |
 | Node-RED | Abstracción visual para integradores ETL (`Low code`) |
 | Git | Controlador de todo el versionado originario de los ficheros físicos |
+| FastAPI | Framework asíncrono para microservicios REST (Vibe Coding) |
+| httpx | Cliente HTTP asíncrono para consumo de APIs externas |
+| Pydantic v2 | Validación y serialización de datos en servicios Python |
+| uvicorn | Servidor ASGI para despliegue de aplicaciones FastAPI |
 
 ## 🗺️ Orden de estudio recomendado
 Para alcanzar una óptima comprensión evolutiva orientada a las arquitecturas puras de datos (sin incluir ofimática separada o modelado frontend), el recorrido lógico se ajusta firmemente a la progresión impuesta:
@@ -140,6 +173,7 @@ Para alcanzar una óptima comprensión evolutiva orientada a las arquitecturas p
 3. **UD6 y UD7**: Desglose especializado de motores ultra veloces (Redis) o altamente entrelazados (Neo4j).
 4. **UD9**: El compendio integrador orquestador por excelencia (Kafka + ETL Pipeline).
 5. **UD8**: Visualización interpretativa asíncrona final una vez garantizado el origen (Power BI).
+6. **UD10**: Desarrollo asistido por IA y microservicios REST profesionales (Vibe Coding + FastAPI).
 
 ## 📝 Notas
 - Los materiales de esta asignatura son de carácter estrictamente educativo.
