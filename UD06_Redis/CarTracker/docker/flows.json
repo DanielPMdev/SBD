@@ -1,0 +1,592 @@
+[
+    {
+        "id": "b15ca3d4ab584d6b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4a7cfae070571fa3",
+        "type": "group",
+        "z": "b15ca3d4ab584d6b",
+        "name": "create zone index",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "44b8d56abeae926f",
+            "9d083a3413c9df9e",
+            "7757e8f9444604e3",
+            "84f17ce76f2c9355",
+            "5cbb53978768774e",
+            "80671a779918a97f",
+            "d4f7e88d7698e75a",
+            "a1b55aeda3d6ed43"
+        ],
+        "x": 94,
+        "y": 179,
+        "w": 922,
+        "h": 142
+    },
+    {
+        "id": "df9dd8ca17df8189",
+        "type": "group",
+        "z": "b15ca3d4ab584d6b",
+        "name": "Initialize",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "36e3f0b4b3305d73",
+            "ac178cd8391f8e1e",
+            "0f572b939a17e6ba",
+            "aab158b51568964e"
+        ],
+        "x": 94,
+        "y": 39,
+        "w": 512,
+        "h": 122
+    },
+    {
+        "id": "6e4764de20ec20e5",
+        "type": "group",
+        "z": "b15ca3d4ab584d6b",
+        "name": "Producer",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "a0e45794c3101d72",
+            "0de450bbbb71eecb",
+            "aa7e81b399322c27"
+        ],
+        "x": 94,
+        "y": 359,
+        "w": 612,
+        "h": 82
+    },
+    {
+        "id": "ca31a91e2eca57db",
+        "type": "group",
+        "z": "b15ca3d4ab584d6b",
+        "name": "Consumer",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ba43c91e81ae610d",
+            "b93d0fa8dea74983",
+            "574501ea01af519e",
+            "60d849342bf20452",
+            "8870720b88ab22cf",
+            "3833afe0018ce5cd",
+            "41120ba8216cabb3"
+        ],
+        "x": 94,
+        "y": 519,
+        "w": 952,
+        "h": 182
+    },
+    {
+        "id": "ba43c91e81ae610d",
+        "type": "worldmap",
+        "z": "b15ca3d4ab584d6b",
+        "g": "ca31a91e2eca57db",
+        "name": "",
+        "lat": "39.56369678374537",
+        "lon": "-0.3115750026142905",
+        "zoom": "10",
+        "layer": "OSMC",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "deg",
+        "showgrid": "false",
+        "showruler": "true",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,BU,RW,SN,TL,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 960,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "b93d0fa8dea74983",
+        "type": "inject",
+        "z": "b15ca3d4ab584d6b",
+        "g": "ca31a91e2eca57db",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "x": 520,
+        "y": 560,
+        "wires": [
+            [
+                "574501ea01af519e"
+            ]
+        ]
+    },
+    {
+        "id": "574501ea01af519e",
+        "type": "function",
+        "z": "b15ca3d4ab584d6b",
+        "g": "ca31a91e2eca57db",
+        "name": "function 1",
+        "func": "const gs = {\n    \"type\": \"FeatureCollection\",\n    \"features\": [\n        {\n            \"type\": \"Feature\",\n            \"properties\": {\n                \"zoneId\": 1,\n                \"zoneName\": \"alboraia\"\n            },\n            \"geometry\": {\n                \"coordinates\": [\n                    [\n                        [\n                            -0.35144678987961697,\n                            39.483824127585876\n                        ],\n                        [\n                            -0.34689466693092186,\n                            39.48227176313591\n                        ],\n                        [\n                            -0.33111903487034056,\n                            39.48811326427534\n                        ],\n                        [\n                            -0.3230720881161915,\n                            39.49979746182589\n                        ],\n                        [\n                            -0.3266722650166969,\n                            39.50143130249205\n                        ],\n                        [\n                            -0.35144678987961697,\n                            39.483824127585876\n                        ]\n                    ]\n                ],\n                \"type\": \"Polygon\"\n            }\n        },\n        {\n            \"type\": \"Feature\",\n            \"properties\": {\n                \"zoneId\": 2,\n                \"zoneName\": \"almassera\"\n            },\n            \"geometry\": {\n                \"coordinates\": [\n                    [\n                        [\n                            -0.32641296514978535,\n                            39.50119058730374\n                        ],\n                        [\n                            -0.3238611028483831,\n                            39.50027169005193\n                        ],\n                        [\n                            -0.32431488163885547,\n                            39.50858488728201\n                        ],\n                        [\n                            -0.3202885798099828,\n                            39.51492846521677\n                        ],\n                        [\n                            -0.3226705065992803,\n                            39.51527845089953\n                        ],\n                        [\n                            -0.3269803130833395,\n                            39.50814746667902\n                        ],\n                        [\n                            -0.32641296514978535,\n                            39.50119058730374\n                        ]\n                    ]\n                ],\n                \"type\": \"Polygon\"\n            }\n        },\n        {\n            \"type\": \"Feature\",\n            \"properties\": {\n                \"zoneId\": 3,\n                \"zoneName\": \"meliana\"\n            },\n            \"geometry\": {\n                \"coordinates\": [\n                    [\n                        [\n                            -0.32267261305597117,\n                            39.51530346749314\n                        ],\n                        [\n                            -0.31862779661952345,\n                            39.514679334626294\n                        ],\n                        [\n                            -0.31010352609271763,\n                            39.529942264486436\n                        ],\n                        [\n                            -0.31290429571222944,\n                            39.531141779033135\n                        ],\n                        [\n                            -0.32267261305597117,\n                            39.51530346749314\n                        ]\n                    ]\n                ],\n                \"type\": \"Polygon\"\n            }\n        },\n        {\n            \"type\": \"Feature\",\n            \"properties\": {\n                \"zoneId\": 4,\n                \"zoneName\": \"albuixech\"\n            },\n            \"geometry\": {\n                \"coordinates\": [\n                    [\n                        [\n                            -0.3130284439052673,\n                            39.53109452010284\n                        ],\n                        [\n                            -0.31010366630670205,\n                            39.52979841832013\n                        ],\n                        [\n                            -0.2991525417767207,\n                            39.538436326891315\n                        ],\n                        [\n                            -0.2951705407485292,\n                            39.54985590694767\n                        ],\n                        [\n                            -0.29821990543771904,\n                            39.55119912443868\n                        ],\n                        [\n                            -0.3130284439052673,\n                            39.53109452010284\n                        ]\n                    ]\n                ],\n                \"type\": \"Polygon\"\n            }\n        },\n        {\n            \"type\": \"Feature\",\n            \"properties\": {\n                \"zoneId\": 5,\n                \"zoneName\": \"massamagrell\"\n            },\n            \"geometry\": {\n                \"coordinates\": [\n                    [\n                        [\n                            -0.2982821378790277,\n                            39.551151643874505\n                        ],\n                        [\n                            -0.29672647878138037,\n                            39.55052772405253\n                        ],\n                        [\n                            -0.2929937776577276,\n                            39.57839631728163\n                        ],\n                        [\n                            -0.2956692124708127,\n                            39.57849223298271\n                        ],\n                        [\n                            -0.2982821378790277,\n                            39.551151643874505\n                        ]\n                    ]\n                ],\n                \"type\": \"Polygon\"\n            }\n        },\n        {\n            \"type\": \"Feature\",\n            \"properties\": {\n                \"zoneId\": 6,\n                \"zoneName\": \"el puig\"\n            },\n            \"geometry\": {\n                \"coordinates\": [\n                    [\n                        [\n                            -0.295603101614347,\n                            39.578444701448376\n                        ],\n                        [\n                            -0.2933012853983712,\n                            39.578396466740514\n                        ],\n                        [\n                            -0.29187099039828013,\n                            39.593357431271244\n                        ],\n                        [\n                            -0.2922434762458863,\n                            39.600117021601875\n                        ],\n                        [\n                            -0.2941101316153265,\n                            39.600404670536534\n                        ],\n                        [\n                            -0.295603101614347,\n                            39.578444701448376\n                        ]\n                    ]\n                ],\n                \"type\": \"Polygon\"\n            }\n        },\n        {\n            \"type\": \"Feature\",\n            \"properties\": {\n                \"zoneId\": 7,\n                \"zoneName\": \"puçol\"\n            },\n            \"geometry\": {\n                \"coordinates\": [\n                    [\n                        [\n                            -0.29404788211087407,\n                            39.600453384358474\n                        ],\n                        [\n                            -0.2927412299835339,\n                            39.600261588780796\n                        ],\n                        [\n                            -0.29442116871345547,\n                            39.622981384843\n                        ],\n                        [\n                            -0.29491934547357346,\n                            39.62595233262306\n                        ],\n                        [\n                            -0.29927531856827727,\n                            39.62944965546228\n                        ],\n                        [\n                            -0.3000841978918629,\n                            39.62834746959149\n                        ],\n                        [\n                            -0.2958522408274007,\n                            39.62317305335645\n                        ],\n                        [\n                            -0.29404788211087407,\n                            39.600453384358474\n                        ]\n                    ]\n                ],\n                \"type\": \"Polygon\"\n            }\n        }\n    ]\n};\n\nvar m = { overlay: \"Tracking zones\", geojson: gs, fit: true };\n\nmsg.payload = { command: { map: m, lat: 39.56369678374537, lon: -0.3115750026142905, layer: \"zones\" } };\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 560,
+        "wires": [
+            [
+                "ba43c91e81ae610d"
+            ]
+        ]
+    },
+    {
+        "id": "60d849342bf20452",
+        "type": "inject",
+        "z": "b15ca3d4ab584d6b",
+        "g": "ca31a91e2eca57db",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "x": 520,
+        "y": 620,
+        "wires": [
+            [
+                "8870720b88ab22cf"
+            ]
+        ]
+    },
+    {
+        "id": "8870720b88ab22cf",
+        "type": "function",
+        "z": "b15ca3d4ab584d6b",
+        "g": "ca31a91e2eca57db",
+        "name": "function 3",
+        "func": "const gs = flow.get(\"tracking_points\");\n\nvar m = { overlay: \"Tracking points\", geojson: gs, fit: true };\n\nmsg.payload = { command: { map: m, lat: 39.56369678374537, lon: -0.3115750026142905, layer: \"points\" } };\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 620,
+        "wires": [
+            [
+                "ba43c91e81ae610d"
+            ]
+        ]
+    },
+    {
+        "id": "36e3f0b4b3305d73",
+        "type": "inject",
+        "z": "b15ca3d4ab584d6b",
+        "g": "df9dd8ca17df8189",
+        "name": "init points",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [
+                "ac178cd8391f8e1e"
+            ]
+        ]
+    },
+    {
+        "id": "ac178cd8391f8e1e",
+        "type": "function",
+        "z": "b15ca3d4ab584d6b",
+        "g": "df9dd8ca17df8189",
+        "name": "function 4",
+        "func": "flow.set(\"tracking_points\", { \"type\": \"FeatureCollection\", \"features\": [{ \"type\": \"Feature\", \"properties\": { \"index\": 0 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3506760466609933, 39.48219094762865] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 1 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.349956643244075, 39.48264091967648] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 2 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3492372398271567, 39.483090891724295] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 3 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3485178364102385, 39.48354086377212] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 4 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3477984329933202, 39.483990835819945] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 5 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3470790295764019, 39.48444080786776] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 6 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3463596261594836, 39.48489077991559] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 7 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.34564022274256534, 39.48534075196341] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 8 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3449208193256471, 39.48579072401123] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 9 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3442014159087288, 39.486240696059056] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 10 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.34348201249181054, 39.48669066810688] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 11 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.34276260907489225, 39.4871406401547] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 12 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.34204320565797397, 39.487590612202524] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 13 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.34132380224105574, 39.48804058425034] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 14 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.34060439882413746, 39.48849055629817] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 15 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.33988499540721917, 39.48894052834599] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 16 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3391655919903009, 39.48939050039381] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 17 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3384461885733826, 39.489840472441635] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 18 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.33772678515646437, 39.49029044448946] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 19 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3370073817395461, 39.49074041653728] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 20 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3362879783226278, 39.4911903885851] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 21 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3355685749057095, 39.49164036063293] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 22 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.33484917148879123, 39.492090332680746] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 23 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.334129768071873, 39.49254030472857] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 24 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3334103646549547, 39.492990276776396] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 25 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.33269096123803643, 39.493440248824214] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 26 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.33197155782111815, 39.49389022087204] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 27 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.33125215440419986, 39.494340192919864] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 28 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.33053275098728163, 39.49479016496768] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 29 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32981334757036335, 39.49524013701551] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 30 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32909394415344506, 39.49569010906333] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 31 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3283745407365268, 39.49614008111115] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 32 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3276551373196085, 39.496590053158975] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 33 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32693573390269026, 39.4970400252068] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 34 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32653681261802225, 39.49767856098263] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 35 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32649287494238277, 39.49852596029863] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 36 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3264489372667433, 39.49937335961463] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 37 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3264049995911038, 39.500220758930624] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 38 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3263610619154643, 39.501068158246625] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 39 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32631712423982484, 39.501915557562626] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 40 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32627318656418536, 39.50276295687862] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 41 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3262292488885459, 39.50361035619462] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 42 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3261853112129064, 39.50445775551062] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 43 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3261413735372669, 39.505305154826615] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 44 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3260974358616274, 39.506152554142616] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 45 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3258092597641378, 39.50693365242884] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 46 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32541867182708706, 39.50768694996868] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 47 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32502808389003635, 39.50844024750852] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 48 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32463749595298563, 39.509193545048355] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 49 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32424690801593486, 39.50994684258819] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 50 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32385632007888415, 39.51070014012803] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 51 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32344840388515933, 39.5114433614503] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 52 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3229868999355573, 39.5121554219987] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 53 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3225253959859552, 39.51286748254711] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 54 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32206389203635316, 39.51357954309551] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 55 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3216023880867511, 39.51429160364392] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 56 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3211408841371491, 39.51500366419233] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 57 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32067938018754705, 39.51571572474073] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 58 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.32021787623794495, 39.51642778528914] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 59 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3198545926325295, 39.51718258667937] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 60 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.31964809843974207, 39.51800561539603] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 61 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3194416042469546, 39.51882864411268] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 62 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3192351100541672, 39.51965167282933] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 63 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.31902861586137976, 39.52047470154599] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 64 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.31857285381641365, 39.521177173791436] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 65 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3180558713195202, 39.52185003723821] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 66 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.31753888882262676, 39.522522900684976] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 67 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3170219063257333, 39.52319576413175] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 68 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3165049238288398, 39.52386862757852] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 69 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.31598794133194635, 39.524541491025296] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 70 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3154709588350529, 39.52521435447206] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 71 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3149539763381594, 39.525887217918836] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 72 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.31443699384126594, 39.52656008136561] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 73 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3139200113443725, 39.527232944812376] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 74 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.31340302884747906, 39.52790580825915] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 75 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.31288604635058553, 39.52857867170592] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 76 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3123690638536921, 39.529251535152696] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 77 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.31185208135679865, 39.52992439859946] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 78 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3113350988599052, 39.530597262046236] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 79 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3108181163630117, 39.53127012549301] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 80 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.31030113386611824, 39.531942988939775] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 81 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.30978415136922477, 39.53261585238655] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 82 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3092671688723313, 39.53328871583332] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 83 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.30875018637543783, 39.533961579280096] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 84 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3082332038785444, 39.53463444272686] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 85 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.30771622138165095, 39.535307306173635] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 86 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3071992388847575, 39.53598016962041] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 87 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.306682256387864, 39.536653033067175] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 88 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.30616527389097054, 39.53732589651395] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 89 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.30564829139407707, 39.53799875996072] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 90 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3051313088971836, 39.538671623407495] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 91 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3046143264002901, 39.53934448685426] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 92 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.30409734390339666, 39.540017350301035] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 93 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.30358036140650324, 39.54069021374781] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 94 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.30306337890960977, 39.541363077194575] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 95 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3025463964127163, 39.54203594064135] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 96 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.30202941391582283, 39.54270880408812] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 97 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.30151243141892936, 39.543381667534895] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 98 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3009954489220359, 39.54405453098166] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 99 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.3004784664251424, 39.544727394428435] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 100 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29996148392824895, 39.54540025787521] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 101 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2994445014313555, 39.54607312132198] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 102 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.298927518934462, 39.54674598476875] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 103 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29867418257778294, 39.5475389178412] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 104 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2985059594871165, 39.54837061316514] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 105 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2983377363964501, 39.54920230848908] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 106 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2981695133057837, 39.55003400381302] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 107 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2980012902151173, 39.550865699136956] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 108 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2978330671244509, 39.551697394460895] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 109 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29766484403378446, 39.552529089784834] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 110 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2974966209431181, 39.55336078510877] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 111 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29732839785245163, 39.55419248043271] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 112 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29716017476178525, 39.55502417575665] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 113 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2969919516711188, 39.55585587108059] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 114 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29686509187212057, 39.556693707487824] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 115 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2967844263811863, 39.55753840222479] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 116 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29670376089025197, 39.55838309696176] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 117 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29662309539931764, 39.55922779169874] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 118 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29654242990838336, 39.56007248643571] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 119 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29646176441744904, 39.560917181172684] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 120 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29638109892651476, 39.56176187590965] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 121 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29630043343558043, 39.56260657064662] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 122 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29621976794464616, 39.5634512653836] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 123 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29613910245371183, 39.56429596012057] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 124 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29605843696277756, 39.56514065485754] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 125 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29597777147184323, 39.56598534959451] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 126 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2958971059809089, 39.56683004433148] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 127 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29581644048997463, 39.56767473906845] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 128 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2957357749990403, 39.56851943380543] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 129 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29565510950810603, 39.5693641285424] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 130 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2955744440171717, 39.570208823279366] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 131 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2954937785262374, 39.57105351801634] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 132 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2954131130353031, 39.57189821275331] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 133 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2953324475443688, 39.57274290749029] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 134 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2952517820534345, 39.573587602227256] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 135 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29517111656250017, 39.574432296964225] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 136 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2950904510715659, 39.5752769917012] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 137 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29500978558063157, 39.57612168643817] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 138 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2949291200896973, 39.57696638117514] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 139 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29484845459876297, 39.577811075912116] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 140 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2947677891078287, 39.578655770649085] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 141 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29468712361689436, 39.579500465386054] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 142 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2946064581259601, 39.58034516012303] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 143 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29452579263502576, 39.58118985486] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 144 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2944451271440915, 39.582034549596976] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 145 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29436446165315716, 39.582879244333945] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 146 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29428379616222283, 39.583723939070914] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 147 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29420313067128856, 39.58456863380789] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 148 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29412246518035423, 39.58541332854486] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 149 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29404179968941996, 39.58625802328183] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 150 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29396113419848563, 39.587102718018805] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 151 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29388046870755136, 39.587947412755774] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 152 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29379980321661703, 39.58879210749274] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 153 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29371913772568276, 39.58963680222972] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 154 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2936384722347484, 39.59048149696669] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 155 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2935578067438141, 39.59132619170366] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 156 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2934771412528798, 39.592170886440634] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 157 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2933964757619455, 39.5930155811776] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 158 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2933158102710112, 39.59386027591458] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 159 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2933114112033454, 39.59470618956971] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 160 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2933650419431843, 39.59555303067868] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 161 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2934186726830232, 39.59639987178765] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 162 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29347230342286207, 39.59724671289662] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 163 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29352593416270095, 39.59809355400559] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 164 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29357956490253984, 39.59894039511456] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 165 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2936331956423788, 39.59978723622353] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 166 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29368682638221766, 39.600634077332494] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 167 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29374045712205654, 39.60148091844147] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 168 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2937940878618954, 39.602327759550434] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 169 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2938477186017343, 39.6031746006594] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 170 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2939013493415732, 39.604021441768374] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 171 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2939549800814121, 39.60486828287734] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 172 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29400861082125096, 39.60571512398631] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 173 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2940622415610899, 39.60656196509528] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 174 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2941158723009288, 39.60740880620425] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 175 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29416950304076767, 39.608255647313214] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 176 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29422313378060655, 39.60910248842218] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 177 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29427676452044543, 39.609949329531155] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 178 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2943303952602843, 39.61079617064012] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 179 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2943840260001232, 39.61164301174909] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 180 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29443765673996214, 39.61248985285806] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 181 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.294491287479801, 39.61333669396703] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 182 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2945449182196399, 39.614183535075995] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 183 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2945985489594788, 39.61503037618497] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 184 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2946521796993177, 39.615877217293935] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 185 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29470581043915656, 39.6167240584029] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 186 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29475944117899544, 39.617570899511875] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 187 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2948130719188344, 39.61841774062084] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 188 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29486670265867326, 39.61926458172981] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 189 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29492033339851215, 39.62011142283878] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 190 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29497396413835103, 39.62095826394775] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 191 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2950275948781899, 39.621805105056715] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 192 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2950812256180288, 39.62265194616569] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 193 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2951348563578677, 39.623498787274656] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 194 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2954229601337062, 39.62426977346256] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 195 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2958755059493797, 39.624987560620994] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 196 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29632805176505317, 39.62570534777942] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 197 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.29678059758072667, 39.62642313493786] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 198 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2972331433964001, 39.62714092209629] } }, { \"type\": \"Feature\", \"properties\": { \"index\": 199 }, \"geometry\": { \"type\": \"Point\", \"coordinates\": [-0.2976856892120736, 39.627858709254724] } }] });\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0f572b939a17e6ba",
+        "type": "inject",
+        "z": "b15ca3d4ab584d6b",
+        "g": "df9dd8ca17df8189",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 120,
+        "wires": [
+            [
+                "aab158b51568964e"
+            ]
+        ]
+    },
+    {
+        "id": "aab158b51568964e",
+        "type": "change",
+        "z": "b15ca3d4ab584d6b",
+        "g": "df9dd8ca17df8189",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tracking_index",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a0e45794c3101d72",
+        "type": "websocket out",
+        "z": "b15ca3d4ab584d6b",
+        "g": "6e4764de20ec20e5",
+        "name": "",
+        "server": "9bdcfaba6e6418fe",
+        "client": "",
+        "x": 610,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "0de450bbbb71eecb",
+        "type": "inject",
+        "z": "b15ca3d4ab584d6b",
+        "g": "6e4764de20ec20e5",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "aa7e81b399322c27"
+            ]
+        ]
+    },
+    {
+        "id": "aa7e81b399322c27",
+        "type": "function",
+        "z": "b15ca3d4ab584d6b",
+        "g": "6e4764de20ec20e5",
+        "name": "function 6",
+        "func": "const geojson = flow.get(\"tracking_points\");\nlet index = parseInt(flow.get(\"tracking_index\"));\nif (index == geojson[\"features\"].length){\n    index =0;\n}\nconst coords = geojson[\"features\"][index][\"geometry\"][\"coordinates\"];\nmsg.payload = {lat: coords[1], lon: coords[0]};\nflow.set(\"tracking_index\",++index);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 400,
+        "wires": [
+            [
+                "a0e45794c3101d72"
+            ]
+        ]
+    },
+    {
+        "id": "3833afe0018ce5cd",
+        "type": "websocket in",
+        "z": "b15ca3d4ab584d6b",
+        "g": "ca31a91e2eca57db",
+        "name": "",
+        "server": "e3c04bfaabd8bdf5",
+        "client": "",
+        "x": 190,
+        "y": 660,
+        "wires": [
+            [
+                "41120ba8216cabb3"
+            ]
+        ]
+    },
+    {
+        "id": "44b8d56abeae926f",
+        "type": "inject",
+        "z": "b15ca3d4ab584d6b",
+        "g": "4a7cfae070571fa3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[\"zonesIdx\",\"ON\",\"JSON\",\"PREFIX\",\"1\",\"geo:\",\"SCHEMA\",\"$.zoneId\",\"AS\",\"zoneId\",\"TAG\",\"$.zoneName\",\"AS\",\"zoneName\",\"TAG\",\"$.shape\",\"AS\",\"shape\",\"GEOSHAPE\",\"SPHERICAL\"]",
+        "payloadType": "json",
+        "x": 230,
+        "y": 220,
+        "wires": [
+            [
+                "9d083a3413c9df9e"
+            ]
+        ]
+    },
+    {
+        "id": "9d083a3413c9df9e",
+        "type": "redis-command",
+        "z": "b15ca3d4ab584d6b",
+        "g": "4a7cfae070571fa3",
+        "server": "b8c7566435d23485",
+        "command": "FT.CREATE",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 530,
+        "y": 220,
+        "wires": [
+            [
+                "7757e8f9444604e3"
+            ]
+        ]
+    },
+    {
+        "id": "7757e8f9444604e3",
+        "type": "debug",
+        "z": "b15ca3d4ab584d6b",
+        "g": "4a7cfae070571fa3",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "84f17ce76f2c9355",
+        "type": "inject",
+        "z": "b15ca3d4ab584d6b",
+        "g": "4a7cfae070571fa3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"zoneId\":\"1\",\"zoneName\":\"alboraia\",\"shape\":\"POLYGON ((-0.35144678987961697 39.483824127585876, -0.34689466693092186 39.48227176313591, -0.33111903487034056 39.48811326427534, -0.3230720881161915 39.49979746182589, -0.3266722650166969 39.50143130249205, -0.35144678987961697 39.483824127585876))\"},{\"zoneId\":\"2\",\"zoneName\":\"almassera\",\"shape\":\"POLYGON ((-0.32641296514978535 39.50119058730374, -0.3238611028483831 39.50027169005193, -0.32431488163885547 39.50858488728201, -0.3202885798099828 39.51492846521677, -0.3226705065992803 39.51527845089953, -0.3269803130833395 39.50814746667902, -0.32641296514978535 39.50119058730374))\"},{\"zoneId\":\"3\",\"zoneName\":\"meliana\",\"shape\":\"POLYGON ((-0.32267261305597117 39.51530346749314, -0.31862779661952345 39.514679334626294, -0.31010352609271763 39.529942264486436, -0.31290429571222944 39.531141779033135, -0.32267261305597117 39.51530346749314))\"},{\"zoneId\":\"4\",\"zoneName\":\"albuixech\",\"shape\":\"POLYGON ((-0.3130284439052673 39.53109452010284, -0.31010366630670205 39.52979841832013, -0.2991525417767207 39.538436326891315, -0.2951705407485292 39.54985590694767, -0.29821990543771904 39.55119912443868, -0.3130284439052673 39.53109452010284))\"},{\"zoneId\":\"5\",\"zoneName\":\"massamagrell\",\"shape\":\"POLYGON ((-0.2982821378790277 39.551151643874505, -0.29672647878138037 39.55052772405253, -0.2929937776577276 39.57839631728163, -0.2956692124708127 39.57849223298271, -0.2982821378790277 39.551151643874505))\"},{\"zoneId\":\"6\",\"zoneName\":\"el puig\",\"shape\":\"POLYGON ((-0.295603101614347 39.578444701448376, -0.2933012853983712 39.578396466740514, -0.29187099039828013 39.593357431271244, -0.2922434762458863 39.600117021601875, -0.2941101316153265 39.600404670536534, -0.295603101614347 39.578444701448376))\"},{\"zoneId\":\"7\",\"zoneName\":\"puçol\",\"shape\":\"POLYGON ((-0.29404788211087407 39.600453384358474, -0.2927412299835339 39.600261588780796, -0.29442116871345547 39.622981384843, -0.29491934547357346 39.62595233262306, -0.29927531856827727 39.62944965546228, -0.3000841978918629 39.62834746959149, -0.2958522408274007 39.62317305335645, -0.29404788211087407 39.600453384358474))\"}]",
+        "payloadType": "json",
+        "x": 190,
+        "y": 280,
+        "wires": [
+            [
+                "5cbb53978768774e"
+            ]
+        ]
+    },
+    {
+        "id": "5cbb53978768774e",
+        "type": "split",
+        "z": "b15ca3d4ab584d6b",
+        "g": "4a7cfae070571fa3",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 330,
+        "y": 280,
+        "wires": [
+            [
+                "d4f7e88d7698e75a"
+            ]
+        ]
+    },
+    {
+        "id": "80671a779918a97f",
+        "type": "redis-command",
+        "z": "b15ca3d4ab584d6b",
+        "g": "4a7cfae070571fa3",
+        "server": "b8c7566435d23485",
+        "command": "JSON.SET",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 720,
+        "y": 280,
+        "wires": [
+            [
+                "a1b55aeda3d6ed43"
+            ]
+        ]
+    },
+    {
+        "id": "d4f7e88d7698e75a",
+        "type": "function",
+        "z": "b15ca3d4ab584d6b",
+        "g": "4a7cfae070571fa3",
+        "name": "function 7",
+        "func": "msg.payload = [`geo:${msg.payload.zoneId}`,\"$\",JSON.stringify(msg.payload)];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 280,
+        "wires": [
+            [
+                "80671a779918a97f"
+            ]
+        ]
+    },
+    {
+        "id": "a1b55aeda3d6ed43",
+        "type": "debug",
+        "z": "b15ca3d4ab584d6b",
+        "g": "4a7cfae070571fa3",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "41120ba8216cabb3",
+        "type": "function",
+        "z": "b15ca3d4ab584d6b",
+        "g": "ca31a91e2eca57db",
+        "name": "Add Car",
+        "func": "const event = JSON.parse(msg.payload);\n\nvar thing = {\n    name:\"Pepe\", \n    lat:event['lat'], \n    lon:event['lon'],\n    icon:\"car\",\n    iconColor:\"darkred\",\n    zone: event['zone'],\n    layer: \"xcar\"\n};\nmsg.payload = thing;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 660,
+        "wires": [
+            [
+                "ba43c91e81ae610d"
+            ]
+        ]
+    },
+    {
+        "id": "9bdcfaba6e6418fe",
+        "type": "websocket-listener",
+        "path": "/ws/raw",
+        "wholemsg": "false"
+    },
+    {
+        "id": "e3c04bfaabd8bdf5",
+        "type": "websocket-listener",
+        "path": "/ws/rich",
+        "wholemsg": "false"
+    },
+    {
+        "id": "b8c7566435d23485",
+        "type": "redis-config",
+        "name": "Local",
+        "options": "{\"host\":\"redis-stack\",\"db\":0}",
+        "cluster": false,
+        "optionsType": "json"
+    },
+    {
+        "id": "83dea59bcf03fcb2",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-web-worldmap": "5.5.4",
+            "node-red-contrib-redis": "1.4.0"
+        }
+    }
+]

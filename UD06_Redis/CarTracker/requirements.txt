@@ -1,0 +1,6 @@
+redis
+python-dotenv
+pymongo[srv]
+psycopg2
+websockets
+tkintermapview

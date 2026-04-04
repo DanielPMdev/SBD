@@ -10,34 +10,34 @@ Este repositorio compila todos los materiales formativos, ejercicios prácticos 
 
 ```
 📦 Sistemas de Big Data
- ┣ 📂 UD1_MongoDB
+ ┣ 📂 UD01_MongoDB
  ┃ ┣ 📓 DanielPorrasMorales_Actividad_MongoDB_Instituto.pdf
  ┃ ┣ 🐍 MongoConexion/app_mongo_instituto.py
  ┃ ┣ ⚙️ docker-compose.yaml
  ┃ ┗ 📋 README.md
- ┣ 📂 UD2_GIT
+ ┣ 📂 UD02_GIT
  ┃ ┣ 📄 DanielPorrasMorales_Actividad_GitTraining.pdf
  ┃ ┗ 📋 README.md
- ┣ 📂 UD5_NodeRed
+ ┣ 📂 UD05_NodeRed
  ┃ ┣ ⚙️ docker-compose.yaml
  ┃ ┣ 📄 postgres_init/init.sql
  ┃ ┣ 📓 flows_radares_DanielPorrasMorales.json
  ┃ ┗ 📋 README.md
- ┣ 📂 UD6_Redis
+ ┣ 📂 UD06_Redis
  ┃ ┣ 📂 CarSensor
  ┃ ┣ 📂 CarTracker
  ┃ ┣ 📂 Tickets
  ┃ ┗ 📋 README.md
- ┣ 📂 UD7_Neo4j
+ ┣ 📂 UD07_Neo4j
  ┃ ┣ ⚙️ docker-compose.yml
  ┃ ┣ 📄 RedSocial/Consultas_DanielPorrasMorales.txt
  ┃ ┗ 📋 README.md
- ┣ 📂 UD8_PowerBI
+ ┣ 📂 UD08_PowerBI
  ┃ ┣ 📊 most_valuable_teams.csv
  ┃ ┣ 📈 EquiposMasValiosos.pbix
  ┃ ┣ 📈 IES_Abastos.pbix
  ┃ ┗ 📋 README.md
- ┣ 📂 UD9_Pipelines
+ ┣ 📂 UD09_Pipelines
  ┃ ┣ 📂 factory-etl
  ┃ ┃ ┣ 🐍 src/simulator.py
  ┃ ┃ ┣ 🐍 src/processor.py
@@ -68,7 +68,7 @@ Este repositorio compila todos los materiales formativos, ejercicios prácticos 
 ## 📚 Bloques Temáticos
 
 ### 1. Introducción a MongoDB
-📂 [`UD1_MongoDB/`](./UD1_MongoDB/)
+📂 [`UD01_MongoDB/`](./UD01_MongoDB/)
 
 Introducción y fundamentos en bases de datos orientadas a documentos (BSON), realizando consultas CRUD integrativas y tuberías de agregación abstractas.
 
@@ -78,7 +78,7 @@ Introducción y fundamentos en bases de datos orientadas a documentos (BSON), re
 ---
 
 ### 2. Entrenamiento en Git
-📂 [`UD2_GIT/`](./UD2_GIT/)
+📂 [`UD02_GIT/`](./UD02_GIT/)
 
 Bloque instrumental focalizado en dominar la estructura histórica, instantáneas, subida a repositorios remotos y la lógica distribuida.
 
@@ -88,7 +88,7 @@ Bloque instrumental focalizado en dominar la estructura histórica, instantánea
 ---
 
 ### 5. Procesamiento y Flujos con Node-RED
-📂 [`UD5_NodeRed/`](./UD5_NodeRed/)
+📂 [`UD05_NodeRed/`](./UD05_NodeRed/)
 
 Generación visual de modelos ETL. Conecta entornos y propaga grandes volúmenes de datos simulados a través de bases PostgreSQL y almacenes de datos alternativos.
 
@@ -98,7 +98,7 @@ Generación visual de modelos ETL. Conecta entornos y propaga grandes volúmenes
 ---
 
 ### 6. Bases de Datos en Memoria con Redis
-📂 [`UD6_Redis/`](./UD6_Redis/)
+📂 [`UD06_Redis/`](./UD06_Redis/)
 
 Modelos ultra rápidos (tiempo real) implementando la lógica en memoria principal para radares y evadiendo cuellos de botella mediante proyectos Python independientes (e.g. backend de venta de tickets sin falsos paralelos).
 
@@ -108,7 +108,7 @@ Modelos ultra rápidos (tiempo real) implementando la lógica en memoria princip
 ---
 
 ### 7. Orientación a Grafos con Neo4j
-📂 [`UD7_Neo4j/`](./UD7_Neo4j/)
+📂 [`UD07_Neo4j/`](./UD07_Neo4j/)
 
 El núcleo del ecosistema son sus relaciones. Modelización intensiva de un entorno de redes sociales simulado, extrayendo patrones semánticos directos de sus conexiones adyacentes.
 
@@ -118,7 +118,7 @@ El núcleo del ecosistema son sus relaciones. Modelización intensiva de un ento
 ---
 
 ### 8. Análisis y Modelado Visual con Power BI
-📂 [`UD8_PowerBI/`](./UD8_PowerBI/)
+📂 [`UD08_PowerBI/`](./UD08_PowerBI/)
 
 Unidad dedicada exhaustivamente al Business Intelligence, ingesta tabular de reportes Excel/CSV (Titanic, institutos, finanzas) y transposición visual mediante cuadros de mando accionables (Dashboards).
 
@@ -128,7 +128,7 @@ Unidad dedicada exhaustivamente al Business Intelligence, ingesta tabular de rep
 ---
 
 ### 9. Tuberías de Datos ETL (Streaming)
-📂 [`UD9_Pipelines/`](./UD9_Pipelines/)
+📂 [`UD09_Pipelines/`](./UD09_Pipelines/)
 
 Cúspide de la asignatura, donde se desarrolla de cero y de manera robusta una tubería conectando a fábricas perimetrales simuladas emitiendo en Kafka y volcando en Kibana. Todo bajo controladores orquestados por Python customizado.
 

@@ -1,0 +1,1452 @@
+{
+    "sensor_events": [
+        {
+            "_id": "69308f7701e1cbe932bfd9f4",
+            "vehicle": {
+                "id": "CAR01",
+                "brand": "Toyota",
+                "model": "Corolla",
+                "licensePlate": "ABC-1234",
+                "speed": 3
+            },
+            "sensor": "sensor1",
+            "timestamp": 1764790131607
+        },
+        {
+            "_id": "69308f7701e1cbe932bfd9f5",
+            "vehicle": {
+                "id": "CAR02",
+                "brand": "Ford",
+                "model": "Explorer",
+                "licensePlate": "FGH-5621",
+                "speed": 2
+            },
+            "sensor": "sensor1",
+            "timestamp": 1764790132812
+        },
+        {
+            "_id": "69308f7701e1cbe932bfd9f6",
+            "vehicle": {
+                "id": "CAR01",
+                "brand": "Toyota",
+                "model": "Corolla",
+                "licensePlate": "ABC-1234",
+                "speed": 3
+            },
+            "sensor": "sensor2",
+            "timestamp": 1764790133617
+        },
+        {
+            "_id": "69308f7701e1cbe932bfd9f7",
+            "vehicle": {
+                "id": "CAR02",
+                "brand": "Ford",
+                "model": "Explorer",
+                "licensePlate": "FGH-5621",
+                "speed": 2
+            },
+            "sensor": "sensor2",
+            "timestamp": 1764790135812
+        },
+        {
+            "_id": "69308f7801e1cbe932bfd9f8",
+            "vehicle": {
+                "id": "CAR01",
+                "brand": "Toyota",
+                "model": "Corolla",
+                "licensePlate": "ABC-1234",
+                "speed": 3
+            },
+            "sensor": "sensor3",
+            "timestamp": 1764790136617
+        },
+        {
+            "_id": "69308f7a01e1cbe932bfd9f9",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor1",
+            "timestamp": 1764790138195
+        },
+        {
+            "_id": "69308f7b01e1cbe932bfd9fa",
+            "vehicle": {
+                "id": "CAR08",
+                "brand": "Jeep",
+                "model": "Cherokee",
+                "licensePlate": "SUV-7841",
+                "speed": 2
+            },
+            "sensor": "sensor1",
+            "timestamp": 1764790139573
+        },
+        {
+            "_id": "69308f7b01e1cbe932bfd9fb",
+            "vehicle": {
+                "id": "CAR01",
+                "brand": "Toyota",
+                "model": "Corolla",
+                "licensePlate": "ABC-1234",
+                "speed": 3
+            },
+            "sensor": "sensor4",
+            "timestamp": 1764790139617
+        },
+        {
+            "_id": "69308f7b01e1cbe932bfd9fc",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor2",
+            "timestamp": 1764790139695
+        },
+        {
+            "_id": "69308f7c01e1cbe932bfd9fd",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor1",
+            "timestamp": 1764790139995
+        },
+        {
+            "_id": "69308f7c01e1cbe932bfd9fe",
+            "vehicle": {
+                "id": "CAR02",
+                "brand": "Ford",
+                "model": "Explorer",
+                "licensePlate": "FGH-5621",
+                "speed": 2
+            },
+            "sensor": "sensor3",
+            "timestamp": 1764790140312
+        },
+        {
+            "_id": "69308f7d01e1cbe932bfd9ff",
+            "vehicle": {
+                "id": "CAR06",
+                "brand": "Renault",
+                "model": "Kangoo",
+                "licensePlate": "VAN-1312",
+                "speed": 3
+            },
+            "sensor": "sensor1",
+            "timestamp": 1764790141214
+        },
+        {
+            "_id": "69308f7d01e1cbe932bfda00",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor2",
+            "timestamp": 1764790141495
+        },
+        {
+            "_id": "69308f7d01e1cbe932bfda01",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor3",
+            "timestamp": 1764790141945
+        },
+        {
+            "_id": "69308f7e01e1cbe932bfda02",
+            "vehicle": {
+                "id": "CAR08",
+                "brand": "Jeep",
+                "model": "Cherokee",
+                "licensePlate": "SUV-7841",
+                "speed": 2
+            },
+            "sensor": "sensor2",
+            "timestamp": 1764790142573
+        },
+        {
+            "_id": "69308f7e01e1cbe932bfda03",
+            "vehicle": {
+                "id": "CAR01",
+                "brand": "Toyota",
+                "model": "Corolla",
+                "licensePlate": "ABC-1234",
+                "speed": 3
+            },
+            "sensor": "sensor5",
+            "timestamp": 1764790142617
+        },
+        {
+            "_id": "69308f7f01e1cbe932bfda04",
+            "vehicle": {
+                "id": "CAR06",
+                "brand": "Renault",
+                "model": "Kangoo",
+                "licensePlate": "VAN-1312",
+                "speed": 3
+            },
+            "sensor": "sensor2",
+            "timestamp": 1764790143224
+        },
+        {
+            "_id": "69308f7f01e1cbe932bfda05",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor3",
+            "timestamp": 1764790143745
+        },
+        {
+            "_id": "69308f8001e1cbe932bfda06",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor4",
+            "timestamp": 1764790144195
+        },
+        {
+            "_id": "69308f8001e1cbe932bfda07",
+            "vehicle": {
+                "id": "CAR02",
+                "brand": "Ford",
+                "model": "Explorer",
+                "licensePlate": "FGH-5621",
+                "speed": 2
+            },
+            "sensor": "sensor4",
+            "timestamp": 1764790144812
+        },
+        {
+            "_id": "69308f8201e1cbe932bfda08",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor4",
+            "timestamp": 1764790145995
+        },
+        {
+            "_id": "69308f8201e1cbe932bfda09",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor5",
+            "timestamp": 1764790146445
+        },
+        {
+            "_id": "69308f8201e1cbe932bfda0a",
+            "vehicle": {
+                "id": "CAR01",
+                "brand": "Toyota",
+                "model": "Corolla",
+                "licensePlate": "ABC-1234",
+                "speed": 3
+            },
+            "sensor": "sensor6",
+            "timestamp": 1764790146607
+        },
+        {
+            "_id": "69308f8301e1cbe932bfda0b",
+            "vehicle": {
+                "id": "CAR08",
+                "brand": "Jeep",
+                "model": "Cherokee",
+                "licensePlate": "SUV-7841",
+                "speed": 2
+            },
+            "sensor": "sensor3",
+            "timestamp": 1764790147073
+        },
+        {
+            "_id": "69308f8401e1cbe932bfda0c",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor5",
+            "timestamp": 1764790148245
+        },
+        {
+            "_id": "69308f8701e1cbe932bfda0d",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor6",
+            "timestamp": 1764790151245
+        },
+        {
+            "_id": "69308f8701e1cbe932bfda0e",
+            "vehicle": {
+                "id": "CAR08",
+                "brand": "Jeep",
+                "model": "Cherokee",
+                "licensePlate": "SUV-7841",
+                "speed": 2
+            },
+            "sensor": "sensor4",
+            "timestamp": 1764790151573
+        },
+        {
+            "_id": "6939b44e12311332600b3f8e",
+            "vehicle": {
+                "id": "CAR01",
+                "brand": "Toyota",
+                "model": "Corolla",
+                "licensePlate": "ABC-1234",
+                "speed": 3
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765389390780
+        },
+        {
+            "_id": "6939b45012311332600b3f8f",
+            "vehicle": {
+                "id": "CAR06",
+                "brand": "Renault",
+                "model": "Kangoo",
+                "licensePlate": "VAN-1312",
+                "speed": 3
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765389392165
+        },
+        {
+            "_id": "6939b45012311332600b3f90",
+            "vehicle": {
+                "id": "CAR01",
+                "brand": "Toyota",
+                "model": "Corolla",
+                "licensePlate": "ABC-1234",
+                "speed": 3
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765389392792
+        },
+        {
+            "_id": "6939b45112311332600b3f91",
+            "vehicle": {
+                "id": "CAR02",
+                "brand": "Ford",
+                "model": "Explorer",
+                "licensePlate": "FGH-5621",
+                "speed": 2
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765389393347
+        },
+        {
+            "_id": "6939b45112311332600b3f92",
+            "vehicle": {
+                "id": "CAR07",
+                "brand": "BMW",
+                "model": "320i",
+                "licensePlate": "BMW-4451",
+                "speed": 3
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765389393700
+        },
+        {
+            "_id": "6939b45212311332600b3f93",
+            "vehicle": {
+                "id": "CAR06",
+                "brand": "Renault",
+                "model": "Kangoo",
+                "licensePlate": "VAN-1312",
+                "speed": 3
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765389394176
+        },
+        {
+            "_id": "6939b45212311332600b3f94",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765389394609
+        },
+        {
+            "_id": "6939b45312311332600b3f95",
+            "vehicle": {
+                "id": "CAR07",
+                "brand": "BMW",
+                "model": "320i",
+                "licensePlate": "BMW-4451",
+                "speed": 3
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765389395710
+        },
+        {
+            "_id": "6939b45312311332600b3f96",
+            "vehicle": {
+                "id": "CAR01",
+                "brand": "Toyota",
+                "model": "Corolla",
+                "licensePlate": "ABC-1234",
+                "speed": 3
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765389395790
+        },
+        {
+            "_id": "6939b45412311332600b3f97",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765389396109
+        },
+        {
+            "_id": "6939b45412311332600b3f98",
+            "vehicle": {
+                "id": "CAR02",
+                "brand": "Ford",
+                "model": "Explorer",
+                "licensePlate": "FGH-5621",
+                "speed": 2
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765389396347
+        },
+        {
+            "_id": "6939b45412311332600b3f99",
+            "vehicle": {
+                "id": "CAR08",
+                "brand": "Jeep",
+                "model": "Cherokee",
+                "licensePlate": "SUV-7841",
+                "speed": 2
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765389396369
+        },
+        {
+            "_id": "6939b45512311332600b3f9a",
+            "vehicle": {
+                "id": "CAR06",
+                "brand": "Renault",
+                "model": "Kangoo",
+                "licensePlate": "VAN-1312",
+                "speed": 3
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765389397176
+        },
+        {
+            "_id": "6939b45512311332600b3f9b",
+            "vehicle": {
+                "id": "CAR04",
+                "brand": "Volvo",
+                "model": "FH16",
+                "licensePlate": "TRK-9910",
+                "speed": 2
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765389397310
+        },
+        {
+            "_id": "6939b45612311332600b3f9c",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765389398137
+        },
+        {
+            "_id": "6939b45612311332600b3f9d",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765389398359
+        },
+        {
+            "_id": "6939b45612311332600b3f9e",
+            "vehicle": {
+                "id": "CAR07",
+                "brand": "BMW",
+                "model": "320i",
+                "licensePlate": "BMW-4451",
+                "speed": 3
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765389398710
+        },
+        {
+            "_id": "6939b45612311332600b3f9f",
+            "vehicle": {
+                "id": "CAR05",
+                "brand": "Honda",
+                "model": "CB500",
+                "licensePlate": "MOT-2244",
+                "speed": 5
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765389398760
+        },
+        {
+            "_id": "6939b45612311332600b3fa0",
+            "vehicle": {
+                "id": "CAR01",
+                "brand": "Toyota",
+                "model": "Corolla",
+                "licensePlate": "ABC-1234",
+                "speed": 3
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765389398790
+        },
+        {
+            "_id": "6939b45712311332600b3fa1",
+            "vehicle": {
+                "id": "CAR08",
+                "brand": "Jeep",
+                "model": "Cherokee",
+                "licensePlate": "SUV-7841",
+                "speed": 2
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765389399369
+        },
+        {
+            "_id": "6939b45712311332600b3fa2",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765389399637
+        },
+        {
+            "_id": "6939b45712311332600b3fa3",
+            "vehicle": {
+                "id": "CAR05",
+                "brand": "Honda",
+                "model": "CB500",
+                "licensePlate": "MOT-2244",
+                "speed": 5
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765389399960
+        },
+        {
+            "_id": "6939b45812311332600b3fa4",
+            "vehicle": {
+                "id": "CAR06",
+                "brand": "Renault",
+                "model": "Kangoo",
+                "licensePlate": "VAN-1312",
+                "speed": 3
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765389400175
+        },
+        {
+            "_id": "6939b45812311332600b3fa5",
+            "vehicle": {
+                "id": "CAR04",
+                "brand": "Volvo",
+                "model": "FH16",
+                "licensePlate": "TRK-9910",
+                "speed": 2
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765389400309
+        },
+        {
+            "_id": "6939b45812311332600b3fa6",
+            "vehicle": {
+                "id": "CAR10",
+                "brand": "MAN",
+                "model": "City Bus",
+                "licensePlate": "BUS-9090",
+                "speed": 2
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765389400434
+        },
+        {
+            "_id": "6939b45812311332600b3fa7",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765389400609
+        },
+        {
+            "_id": "6939b45812311332600b3fa8",
+            "vehicle": {
+                "id": "CAR02",
+                "brand": "Ford",
+                "model": "Explorer",
+                "licensePlate": "FGH-5621",
+                "speed": 2
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765389400847
+        },
+        {
+            "_id": "6939b45912311332600b3fa9",
+            "vehicle": {
+                "id": "CAR07",
+                "brand": "BMW",
+                "model": "320i",
+                "licensePlate": "BMW-4451",
+                "speed": 3
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765389401710
+        },
+        {
+            "_id": "6939b45912311332600b3faa",
+            "vehicle": {
+                "id": "CAR05",
+                "brand": "Honda",
+                "model": "CB500",
+                "licensePlate": "MOT-2244",
+                "speed": 5
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765389401760
+        },
+        {
+            "_id": "6939b45912311332600b3fab",
+            "vehicle": {
+                "id": "CAR01",
+                "brand": "Toyota",
+                "model": "Corolla",
+                "licensePlate": "ABC-1234",
+                "speed": 3
+            },
+            "sensor": "sensor5",
+            "timestamp": 1765389401790
+        },
+        {
+            "_id": "6939b45912311332600b3fac",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765389401886
+        },
+        {
+            "_id": "6939b45a12311332600b3fad",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor5",
+            "timestamp": 1765389402859
+        },
+        {
+            "_id": "6939b45b12311332600b3fae",
+            "vehicle": {
+                "id": "CAR06",
+                "brand": "Renault",
+                "model": "Kangoo",
+                "licensePlate": "VAN-1312",
+                "speed": 3
+            },
+            "sensor": "sensor5",
+            "timestamp": 1765389403176
+        },
+        {
+            "_id": "6939b45b12311332600b3faf",
+            "vehicle": {
+                "id": "CAR10",
+                "brand": "MAN",
+                "model": "City Bus",
+                "licensePlate": "BUS-9090",
+                "speed": 2
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765389403434
+        },
+        {
+            "_id": "6939b45b12311332600b3fb0",
+            "vehicle": {
+                "id": "CAR05",
+                "brand": "Honda",
+                "model": "CB500",
+                "licensePlate": "MOT-2244",
+                "speed": 5
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765389403560
+        },
+        {
+            "_id": "6939b45b12311332600b3fb1",
+            "vehicle": {
+                "id": "CAR08",
+                "brand": "Jeep",
+                "model": "Cherokee",
+                "licensePlate": "SUV-7841",
+                "speed": 2
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765389403869
+        },
+        {
+            "_id": "6939b45c12311332600b3fb2",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765389404137
+        },
+        {
+            "_id": "6939b45c12311332600b3fb3",
+            "vehicle": {
+                "id": "CAR07",
+                "brand": "BMW",
+                "model": "320i",
+                "licensePlate": "BMW-4451",
+                "speed": 3
+            },
+            "sensor": "sensor5",
+            "timestamp": 1765389404710
+        },
+        {
+            "_id": "6939b45c12311332600b3fb4",
+            "vehicle": {
+                "id": "CAR04",
+                "brand": "Volvo",
+                "model": "FH16",
+                "licensePlate": "TRK-9910",
+                "speed": 2
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765389404810
+        },
+        {
+            "_id": "6939b45d12311332600b3fb5",
+            "vehicle": {
+                "id": "CAR02",
+                "brand": "Ford",
+                "model": "Explorer",
+                "licensePlate": "FGH-5621",
+                "speed": 2
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765389405347
+        },
+        {
+            "_id": "6939b45d12311332600b3fb6",
+            "vehicle": {
+                "id": "CAR05",
+                "brand": "Honda",
+                "model": "CB500",
+                "licensePlate": "MOT-2244",
+                "speed": 5
+            },
+            "sensor": "sensor5",
+            "timestamp": 1765389405361
+        },
+        {
+            "_id": "6939b45d12311332600b3fb7",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor6",
+            "timestamp": 1765389405859
+        },
+        {
+            "_id": "6939b45e12311332600b3fb8",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor5",
+            "timestamp": 1765389406387
+        },
+        {
+            "_id": "6939b45f12311332600b3fb9",
+            "vehicle": {
+                "id": "CAR05",
+                "brand": "Honda",
+                "model": "CB500",
+                "licensePlate": "MOT-2244",
+                "speed": 5
+            },
+            "sensor": "sensor6",
+            "timestamp": 1765389407760
+        },
+        {
+            "_id": "6939b45f12311332600b3fba",
+            "vehicle": {
+                "id": "CAR10",
+                "brand": "MAN",
+                "model": "City Bus",
+                "licensePlate": "BUS-9090",
+                "speed": 2
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765389407934
+        },
+        {
+            "_id": "6939b46012311332600b3fbb",
+            "vehicle": {
+                "id": "CAR08",
+                "brand": "Jeep",
+                "model": "Cherokee",
+                "licensePlate": "SUV-7841",
+                "speed": 2
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765389408369
+        },
+        {
+            "_id": "6939b46112311332600b3fbc",
+            "vehicle": {
+                "id": "CAR04",
+                "brand": "Volvo",
+                "model": "FH16",
+                "licensePlate": "TRK-9910",
+                "speed": 2
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765389409309
+        },
+        {
+            "_id": "6939b46112311332600b3fbd",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor6",
+            "timestamp": 1765389409386
+        },
+        {
+            "_id": "6939b46212311332600b3fbe",
+            "vehicle": {
+                "id": "CAR05",
+                "brand": "Honda",
+                "model": "CB500",
+                "licensePlate": "MOT-2244",
+                "speed": 5
+            },
+            "sensor": "sensor7",
+            "timestamp": 1765389410161
+        },
+        {
+            "_id": "6939b46412311332600b3fbf",
+            "vehicle": {
+                "id": "CAR10",
+                "brand": "MAN",
+                "model": "City Bus",
+                "licensePlate": "BUS-9090",
+                "speed": 2
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765389412434
+        },
+        {
+            "_id": "6939b9318500cffcedb688da",
+            "vehicle": {
+                "id": "CAR01",
+                "brand": "Toyota",
+                "model": "Corolla",
+                "licensePlate": "ABC-1234",
+                "speed": 3
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765390641715
+        },
+        {
+            "_id": "6939b9328500cffcedb688db",
+            "vehicle": {
+                "id": "CAR02",
+                "brand": "Ford",
+                "model": "Explorer",
+                "licensePlate": "FGH-5621",
+                "speed": 2
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765390642815
+        },
+        {
+            "_id": "6939b9338500cffcedb688dc",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765390643021
+        },
+        {
+            "_id": "6939b9338500cffcedb688dd",
+            "vehicle": {
+                "id": "CAR01",
+                "brand": "Toyota",
+                "model": "Corolla",
+                "licensePlate": "ABC-1234",
+                "speed": 3
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765390643723
+        },
+        {
+            "_id": "6939b9348500cffcedb688de",
+            "vehicle": {
+                "id": "CAR04",
+                "brand": "Volvo",
+                "model": "FH16",
+                "licensePlate": "TRK-9910",
+                "speed": 2
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765390644472
+        },
+        {
+            "_id": "6939b9348500cffcedb688df",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765390644521
+        },
+        {
+            "_id": "6939b9358500cffcedb688e0",
+            "vehicle": {
+                "id": "CAR06",
+                "brand": "Renault",
+                "model": "Kangoo",
+                "licensePlate": "VAN-1312",
+                "speed": 3
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765390645137
+        },
+        {
+            "_id": "6939b9358500cffcedb688e1",
+            "vehicle": {
+                "id": "CAR02",
+                "brand": "Ford",
+                "model": "Explorer",
+                "licensePlate": "FGH-5621",
+                "speed": 2
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765390645815
+        },
+        {
+            "_id": "6939b9358500cffcedb688e2",
+            "vehicle": {
+                "id": "CAR07",
+                "brand": "BMW",
+                "model": "320i",
+                "licensePlate": "BMW-4451",
+                "speed": 3
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765390645915
+        },
+        {
+            "_id": "6939b9368500cffcedb688e3",
+            "vehicle": {
+                "id": "CAR01",
+                "brand": "Toyota",
+                "model": "Corolla",
+                "licensePlate": "ABC-1234",
+                "speed": 3
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765390646723
+        },
+        {
+            "_id": "6939b9368500cffcedb688e4",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765390646771
+        },
+        {
+            "_id": "6939b9378500cffcedb688e5",
+            "vehicle": {
+                "id": "CAR06",
+                "brand": "Renault",
+                "model": "Kangoo",
+                "licensePlate": "VAN-1312",
+                "speed": 3
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765390647149
+        },
+        {
+            "_id": "6939b9378500cffcedb688e6",
+            "vehicle": {
+                "id": "CAR04",
+                "brand": "Volvo",
+                "model": "FH16",
+                "licensePlate": "TRK-9910",
+                "speed": 2
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765390647472
+        },
+        {
+            "_id": "6939b9378500cffcedb688e7",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765390647509
+        },
+        {
+            "_id": "6939b9378500cffcedb688e8",
+            "vehicle": {
+                "id": "CAR08",
+                "brand": "Jeep",
+                "model": "Cherokee",
+                "licensePlate": "SUV-7841",
+                "speed": 2
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765390647552
+        },
+        {
+            "_id": "6939b9378500cffcedb688e9",
+            "vehicle": {
+                "id": "CAR07",
+                "brand": "BMW",
+                "model": "320i",
+                "licensePlate": "BMW-4451",
+                "speed": 3
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765390647925
+        },
+        {
+            "_id": "6939b9388500cffcedb688ea",
+            "vehicle": {
+                "id": "CAR05",
+                "brand": "Honda",
+                "model": "CB500",
+                "licensePlate": "MOT-2244",
+                "speed": 5
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765390648132
+        },
+        {
+            "_id": "6939b9398500cffcedb688eb",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765390649009
+        },
+        {
+            "_id": "6939b9398500cffcedb688ec",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765390649021
+        },
+        {
+            "_id": "6939b9398500cffcedb688ed",
+            "vehicle": {
+                "id": "CAR05",
+                "brand": "Honda",
+                "model": "CB500",
+                "licensePlate": "MOT-2244",
+                "speed": 5
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765390649332
+        },
+        {
+            "_id": "6939b9398500cffcedb688ee",
+            "vehicle": {
+                "id": "CAR10",
+                "brand": "MAN",
+                "model": "City Bus",
+                "licensePlate": "BUS-9090",
+                "speed": 2
+            },
+            "sensor": "sensor1",
+            "timestamp": 1765390649543
+        },
+        {
+            "_id": "6939b9398500cffcedb688ef",
+            "vehicle": {
+                "id": "CAR01",
+                "brand": "Toyota",
+                "model": "Corolla",
+                "licensePlate": "ABC-1234",
+                "speed": 3
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765390649723
+        },
+        {
+            "_id": "6939b93a8500cffcedb688f0",
+            "vehicle": {
+                "id": "CAR06",
+                "brand": "Renault",
+                "model": "Kangoo",
+                "licensePlate": "VAN-1312",
+                "speed": 3
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765390650148
+        },
+        {
+            "_id": "6939b93a8500cffcedb688f1",
+            "vehicle": {
+                "id": "CAR02",
+                "brand": "Ford",
+                "model": "Explorer",
+                "licensePlate": "FGH-5621",
+                "speed": 2
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765390650315
+        },
+        {
+            "_id": "6939b93a8500cffcedb688f2",
+            "vehicle": {
+                "id": "CAR08",
+                "brand": "Jeep",
+                "model": "Cherokee",
+                "licensePlate": "SUV-7841",
+                "speed": 2
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765390650544
+        },
+        {
+            "_id": "6939b93a8500cffcedb688f3",
+            "vehicle": {
+                "id": "CAR07",
+                "brand": "BMW",
+                "model": "320i",
+                "licensePlate": "BMW-4451",
+                "speed": 3
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765390650925
+        },
+        {
+            "_id": "6939b93b8500cffcedb688f4",
+            "vehicle": {
+                "id": "CAR05",
+                "brand": "Honda",
+                "model": "CB500",
+                "licensePlate": "MOT-2244",
+                "speed": 5
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765390651132
+        },
+        {
+            "_id": "6939b93b8500cffcedb688f5",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765390651259
+        },
+        {
+            "_id": "6939b93b8500cffcedb688f6",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor5",
+            "timestamp": 1765390651271
+        },
+        {
+            "_id": "6939b93b8500cffcedb688f7",
+            "vehicle": {
+                "id": "CAR04",
+                "brand": "Volvo",
+                "model": "FH16",
+                "licensePlate": "TRK-9910",
+                "speed": 2
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765390651972
+        },
+        {
+            "_id": "6939b93c8500cffcedb688f8",
+            "vehicle": {
+                "id": "CAR10",
+                "brand": "MAN",
+                "model": "City Bus",
+                "licensePlate": "BUS-9090",
+                "speed": 2
+            },
+            "sensor": "sensor2",
+            "timestamp": 1765390652543
+        },
+        {
+            "_id": "6939b93c8500cffcedb688f9",
+            "vehicle": {
+                "id": "CAR05",
+                "brand": "Honda",
+                "model": "CB500",
+                "licensePlate": "MOT-2244",
+                "speed": 5
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765390652932
+        },
+        {
+            "_id": "6939b93d8500cffcedb688fa",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765390653509
+        },
+        {
+            "_id": "6939b93d8500cffcedb688fb",
+            "vehicle": {
+                "id": "CAR07",
+                "brand": "BMW",
+                "model": "320i",
+                "licensePlate": "BMW-4451",
+                "speed": 3
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765390653925
+        },
+        {
+            "_id": "6939b93e8500cffcedb688fc",
+            "vehicle": {
+                "id": "CAR03",
+                "brand": "Mercedes",
+                "model": "Sprinter",
+                "licensePlate": "JKL-8712",
+                "speed": 4
+            },
+            "sensor": "sensor6",
+            "timestamp": 1765390654271
+        },
+        {
+            "_id": "6939b93e8500cffcedb688fd",
+            "vehicle": {
+                "id": "CAR05",
+                "brand": "Honda",
+                "model": "CB500",
+                "licensePlate": "MOT-2244",
+                "speed": 5
+            },
+            "sensor": "sensor5",
+            "timestamp": 1765390654732
+        },
+        {
+            "_id": "6939b93f8500cffcedb688fe",
+            "vehicle": {
+                "id": "CAR08",
+                "brand": "Jeep",
+                "model": "Cherokee",
+                "licensePlate": "SUV-7841",
+                "speed": 2
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765390655047
+        },
+        {
+            "_id": "6939b93f8500cffcedb688ff",
+            "vehicle": {
+                "id": "CAR09",
+                "brand": "Nissan",
+                "model": "Navara",
+                "licensePlate": "PCK-5523",
+                "speed": 4
+            },
+            "sensor": "sensor5",
+            "timestamp": 1765390655759
+        },
+        {
+            "_id": "6939b9408500cffcedb68900",
+            "vehicle": {
+                "id": "CAR04",
+                "brand": "Volvo",
+                "model": "FH16",
+                "licensePlate": "TRK-9910",
+                "speed": 2
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765390656472
+        },
+        {
+            "_id": "6939b9418500cffcedb68901",
+            "vehicle": {
+                "id": "CAR10",
+                "brand": "MAN",
+                "model": "City Bus",
+                "licensePlate": "BUS-9090",
+                "speed": 2
+            },
+            "sensor": "sensor3",
+            "timestamp": 1765390657043
+        },
+        {
+            "_id": "6939b9418500cffcedb68902",
+            "vehicle": {
+                "id": "CAR05",
+                "brand": "Honda",
+                "model": "CB500",
+                "licensePlate": "MOT-2244",
+                "speed": 5
+            },
+            "sensor": "sensor6",
+            "timestamp": 1765390657132
+        },
+        {
+            "_id": "6939b9458500cffcedb68903",
+            "vehicle": {
+                "id": "CAR10",
+                "brand": "MAN",
+                "model": "City Bus",
+                "licensePlate": "BUS-9090",
+                "speed": 2
+            },
+            "sensor": "sensor4",
+            "timestamp": 1765390661544
+        }
+    ],
+    "vehicle_count_per_sensor": {
+        "sensor5": 3,
+        "sensor3": 10,
+        "sensor2": 10,
+        "sensor6": 2,
+        "sensor1": 10,
+        "sensor4": 7
+    },
+    "last_sensor_per_vehicle": {
+        "CAR02": "sensor3",
+        "CAR01": "sensor4",
+        "CAR04": "sensor4",
+        "CAR03": "sensor6",
+        "CAR10": "sensor4",
+        "CAR09": "sensor5",
+        "CAR05": "sensor6",
+        "CAR08": "sensor3",
+        "CAR07": "sensor4",
+        "CAR06": "sensor3"
+    }
+}
