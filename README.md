@@ -62,6 +62,9 @@ Este repositorio compila todos los materiales formativos, ejercicios prácticos 
  ┃ ┃ ┣ 📄 info.md
  ┃ ┃ ┗ 📄 walkthrough.md
  ┃ ┗ 📋 README.md
+ ┣ 📂 UD11_GPT
+ ┃ ┣ 📓 mini-rag-from-scratch.ipynb
+ ┃ ┗ 📋 README.md
  ┗ 📋 README.md
 ```
 
@@ -145,6 +148,16 @@ Introducción al desarrollo de software asistido por IA (Vibe Coding). Se constr
 **Conceptos clave:** `Vibe Coding` · `Layered Architecture` · `API REST` · `Funciones Puras`  
 **Tecnologías:** `FastAPI` · `httpx` · `Pydantic v2` · `pytest`
 
+---
+
+### 11. Modelos de Lenguaje y RAG
+📂 [`UD11_GPT/`](./UD11_GPT/)
+
+Implementación desde cero de un sistema Retrieval-Augmented Generation (RAG) minimalista utilizando Jupyter Notebook, embeddings de Hugging Face y consultas a un LLM a través de API. 
+
+**Conceptos clave:** `RAG` · `Embeddings` · `Similitud del Coseno` · `Prompt Engineering`  
+**Tecnologías:** `OpenAI API` · `Sentence Transformers` · `NumPy`
+
 ## 🧰 Stack Tecnológico General
 
 | Tecnología | Rol |
@@ -164,6 +177,9 @@ Introducción al desarrollo de software asistido por IA (Vibe Coding). Se constr
 | httpx | Cliente HTTP asíncrono para consumo de APIs externas |
 | Pydantic v2 | Validación y serialización de datos en servicios Python |
 | uvicorn | Servidor ASGI para despliegue de aplicaciones FastAPI |
+| OpenAI API | Interfaz estándar para el consumo remoto de Modelos de Lenguaje Grandes (LLMs) |
+| sentence_transformers | Generación de embeddings vectoriales para modelos NLP |
+| NumPy | Cálculo algebraico vectorizado de métricas como el coseno |
 
 ## 🗺️ Orden de estudio recomendado
 Para alcanzar una óptima comprensión evolutiva orientada a las arquitecturas puras de datos (sin incluir ofimática separada o modelado frontend), el recorrido lógico se ajusta firmemente a la progresión impuesta:
@@ -174,6 +190,7 @@ Para alcanzar una óptima comprensión evolutiva orientada a las arquitecturas p
 4. **UD9**: El compendio integrador orquestador por excelencia (Kafka + ETL Pipeline).
 5. **UD8**: Visualización interpretativa asíncrona final una vez garantizado el origen (Power BI).
 6. **UD10**: Desarrollo asistido por IA y microservicios REST profesionales (Vibe Coding + FastAPI).
+7. **UD11**: Inmersión en IA generativa elaborando un caso aplicado de RAG y Prompt Engineering interactuando con LLMs.
 
 ## 📝 Notas
 - Los materiales de esta asignatura son de carácter estrictamente educativo.
