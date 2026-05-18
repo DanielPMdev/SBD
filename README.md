@@ -63,7 +63,7 @@ Este repositorio compila todos los materiales formativos, ejercicios prácticos 
  ┃ ┃ ┗ 📄 walkthrough.md
  ┃ ┗ 📋 README.md
  ┣ 📂 UD11_GPT
- ┃ ┣ 📓 mini-rag-from-scratch.ipynb
+ ┃ ┣ 📓 mini_rag_from_scratch.ipynb
  ┃ ┗ 📋 README.md
  ┗ 📋 README.md
 ```
@@ -153,10 +153,10 @@ Introducción al desarrollo de software asistido por IA (Vibe Coding). Se constr
 ### 11. Modelos de Lenguaje y RAG
 📂 [`UD11_GPT/`](./UD11_GPT/)
 
-Implementación desde cero de un sistema Retrieval-Augmented Generation (RAG) minimalista utilizando Jupyter Notebook, embeddings de Hugging Face y consultas a un LLM a través de API. 
+Implementación desde cero de un sistema Retrieval-Augmented Generation (RAG) utilizando Jupyter Notebook, embeddings de Hugging Face y consultas a un LLM a través de API, integrando MongoDB Atlas como base de datos vectorial (Vector Store) para el almacenamiento y la recuperación remota de información de contexto mediante búsquedas vectoriales avanzadas.
 
-**Conceptos clave:** `RAG` · `Embeddings` · `Similitud del Coseno` · `Prompt Engineering`  
-**Tecnologías:** `OpenAI API` · `Sentence Transformers` · `NumPy`
+**Conceptos clave:** `RAG` · `Embeddings` · `Similitud del Coseno` · `Vector Search` · `Prompt Engineering`  
+**Tecnologías:** `OpenAI API` · `Sentence Transformers` · `NumPy` · `MongoDB Atlas` · `PyMongo`
 
 ## 🧰 Stack Tecnológico General
 
@@ -164,7 +164,7 @@ Implementación desde cero de un sistema Retrieval-Augmented Generation (RAG) mi
 |---|---|
 | Python | Lenguaje vehicular universal en analítica subyacente y simulación |
 | Docker & Docker-Compose | Aprovisionadores unificados de todo el clúster (IaaC) |
-| MongoDB | Persistencia en frío NoSQL de archivos |
+| MongoDB | Persistencia en frío NoSQL de archivos y base de datos vectorial (Vector Search) para sistemas RAG |
 | PostgreSQL | Motor persistente en capa analítica de transacciones relacionales |
 | Redis Stack | Memoria caché intersecante y bases de datos transitorias |
 | Neo4j | Visualizador relacional de entidades y grafos atados directamente |
@@ -180,6 +180,7 @@ Implementación desde cero de un sistema Retrieval-Augmented Generation (RAG) mi
 | OpenAI API | Interfaz estándar para el consumo remoto de Modelos de Lenguaje Grandes (LLMs) |
 | sentence_transformers | Generación de embeddings vectoriales para modelos NLP |
 | NumPy | Cálculo algebraico vectorizado de métricas como el coseno |
+| PyMongo | Driver oficial de MongoDB en Python utilizado para almacenamiento de colecciones de embeddings y búsquedas vectoriales |
 
 ## 🗺️ Orden de estudio recomendado
 Para alcanzar una óptima comprensión evolutiva orientada a las arquitecturas puras de datos (sin incluir ofimática separada o modelado frontend), el recorrido lógico se ajusta firmemente a la progresión impuesta:
@@ -190,7 +191,7 @@ Para alcanzar una óptima comprensión evolutiva orientada a las arquitecturas p
 4. **UD9**: El compendio integrador orquestador por excelencia (Kafka + ETL Pipeline).
 5. **UD8**: Visualización interpretativa asíncrona final una vez garantizado el origen (Power BI).
 6. **UD10**: Desarrollo asistido por IA y microservicios REST profesionales (Vibe Coding + FastAPI).
-7. **UD11**: Inmersión en IA generativa elaborando un caso aplicado de RAG y Prompt Engineering interactuando con LLMs.
+7. **UD11**: Inmersión en IA generativa elaborando un caso aplicado de RAG y Prompt Engineering interactuando con LLMs, incorporando almacenamiento vectorial y búsquedas remotas con MongoDB Atlas Vector Search.
 
 ## 📝 Notas
 - Los materiales de esta asignatura son de carácter estrictamente educativo.
